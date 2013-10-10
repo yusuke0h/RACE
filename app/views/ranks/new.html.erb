@@ -1,0 +1,11 @@
+<h1>ランキング作成画面</h1>
+<hr>
+
+<%= simple_form_for :rank, :url => ranks_path, :method => :post do |f| %>
+  <%= f.input :files, as: :file, input_html: { multiple: true } %>
+  <hr>
+
+  <div class="form-actions">
+    <%= f.button :submit, :value => '作成', class: 'btn btn-large btn-primary' %>
+  </div>
+<% end %>
