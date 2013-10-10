@@ -240,15 +240,18 @@ HTML
                           var sum_d = 0.0;
                           $(table).find('td.term').each(function(i, td) {
                               var w = $(td).find("span").text();
-                              sum_d += Math.pow( i - ranks[w], 2);
+
                               if (!ranks.hasOwnProperty(w)) {
                                   $(td).parent().addClass('new');
+                                  sum_d += Math.pow( $(table).find('td.term').length, 2);
                               }
                               else if (i < ranks[w]) {
                                   $(td).parent().addClass('higher');
+                                  sum_d += Math.pow( i - ranks[w], 2);
                               }
                               else if (i > ranks[w]) {
                                   $(td).parent().addClass('lower');
+                                  sum_d += Math.pow( i - ranks[w], 2);
                               }
                               else {
                                   $(td).parent().addClass('tie');

@@ -1,4 +1,9 @@
 Rpv::Application.routes.draw do
+  get "static_pages/home"
+  get "static_pages/help"
+  get "static_pages/demo"
+  get "static_pages/demo_page1"
+  get "static_pages/demo_page2"
   resources :ranks, :only => [:new, :create]
   root 'ranks#new'
 

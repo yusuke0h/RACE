@@ -1,0 +1,4683 @@
+
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <meta charset="UTF-8" />
+        <title>Report</title>
+        <style>
+          * {
+              font-family: sans-serif;
+          }
+          html, body {
+              margin: 0;
+              padding: 0;
+              height: 100%;
+              overflow: hidden;
+          }
+          .hbox {
+              display: -webkit-flex;
+              display:    -moz-flex;
+              display:         flex;
+              -webkit-flex-direction: row;
+                 -moz-flex-direction: row;
+                      flex-direction: row;
+          }
+          .vbox {
+              display: -webkit-flex;
+              display:    -moz-flex;
+              display:         flex;
+              -webkit-flex-direction: column;
+                 -moz-flex-direction: column;
+                      flex-direction: column;
+          }
+          .separator {
+              -webkit-flex: 0 0 8px;
+                 -moz-flex: 0 0 8px;
+                      flex: 0 0 8px;
+          }
+          #outmost {
+              height: 100%;
+          }
+          #links {
+              width: 100%;
+              padding: 0.2em 0.5em;
+              background-color: #252525;
+              box-shadow: 0 0 8px black;
+              -webkit-flex: 0 0 auto;
+                 -moz-flex: 0 0 auto;
+                      flex: 0 0 auto;
+          }
+          #links > a {
+              color: #ff7f2a;
+              text-decoration: none;
+          }
+          #links > a:hover {
+              text-shadow: 0px 0px 8px #f60;
+          }
+          #links > a:before {
+              content: ">";
+          }
+          #main {
+              overflow-y: scroll;
+              -webkit-flex: 1 1;
+                 -moz-flex: 1 1;
+                      flex: 1 1;
+          }
+          .table-container-content-width {
+              margin-right: 8px;
+              -webkit-flex: 0 0 auto;
+                 -moz-flex: 0 0 auto;
+                      flex: 0 0 auto;
+          }
+          .table-container {
+              margin-right: 8px;
+              -webkit-flex: 1 1;
+                 -moz-flex: 1 1;
+                      flex: 1 1;
+          }
+          table {
+              border-collapse: collapse;
+              width: 100%;
+          }
+          thead {
+              border-bottom: 2px solid black;
+          }
+          col.term {
+          }
+          col.weight {
+          }
+          tbody tr:nth-child(odd) {
+              background: white;
+          }
+          tbody tr:nth-child(even) {
+              background: #ddd;
+          }
+          tbody th.text-cell, td.text-cell {
+              text-align: left;
+          }
+          tbody th.num-cell, td.num-cell {
+              text-align: right;
+          }
+          tbody tr.new {
+              background-color: #fea;
+          }
+          tbody tr.higher {
+              background-color: #faa;
+          }
+          tbody tr.lower {
+              background-color: #aaf;
+          }
+          tbody tr.tie {
+              background-color: white;
+          }
+          tbody tr.focused {
+              font-weight: bold;
+              color: #228B22;
+          }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      </head>
+      <body>
+<div id="outmost" class="vbox">
+<div id="main">
+<div class="vbox">
+<div id="exp-noname" class="hbox">
+<div class="table-container-content-width">
+<table>
+<colgroup><col class="term"><col class="weight"></colgroup>
+<thead>
+<tr><th colspan="2">00_BM25nomalIDF_user1.tsv</th></tr>
+<tr><th>-</th></tr>
+<tr><th>XXX</th><th>Weight</th></tr>
+</thead>
+<tbody>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_0').css('display', $('#0_0').css('display') === 'block' ? 'none' : 'block')">
+                          【David Copperfield】：Charles Dickens (4324)
+                      </span>
+                   <div onclick="$('#0_0').css('display','none')" style="display: none" id="0_0">
+                   <ol>
+<li>first. : 52.63</li>
+<li>nine. : 50.72</li>
+<li>note-paper : 50.72</li>
+<li>believe. : 50.72</li>
+<li>music. : 48.51</li>
+<li>three. : 48.51</li>
+<li>sky-rocket : 42.91</li>
+<li>conger-eel : 42.91</li>
+<li>toes. : 42.91</li>
+<li>altered. : 42.91</li>
+<li>doubled-up : 42.91</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  1142.
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_1').css('display', $('#0_1').css('display') === 'block' ? 'none' : 'block')">
+                          【Great Expectations】：Charles Dickens (10443)
+                      </span>
+                   <div onclick="$('#0_1').css('display','none')" style="display: none" id="0_1">
+                   <ol>
+<li>wos : 65.50</li>
+<li>referable : 57.33</li>
+<li>georgiana : 55.60</li>
+<li>fardens : 51.90</li>
+<li>fretfulness : 48.51</li>
+<li>velveteen : 43.95</li>
+<li>cucumber-frames : 42.91</li>
+<li>sprawly : 42.91</li>
+<li>singling : 42.91</li>
+<li>slate-pencil : 42.91</li>
+<li>snappishly : 38.88</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  703.9
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_2').css('display', $('#0_2').css('display') === 'block' ? 'none' : 'block')">
+                          【Wuthering Heights】：Emily Brontë (11601)
+                      </span>
+                   <div onclick="$('#0_2').css('display','none')" style="display: none" id="0_2">
+                   <ol>
+<li>_mine_ : 62.76</li>
+<li>catherine's : 54.84</li>
+<li>mad. : 50.72</li>
+<li>then. : 48.51</li>
+<li>_near_ : 48.51</li>
+<li>window. : 42.91</li>
+<li>unslinging : 42.91</li>
+<li>much_ : 42.91</li>
+<li>fretfully : 38.88</li>
+<li>fly-leaf : 38.88</li>
+<li>_yours_ : 38.88</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  673.3
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_3').css('display', $('#0_3').css('display') === 'block' ? 'none' : 'block')">
+                          【The Memoirs of Sherlock Holmes】：Arthur Conan Doyle (5172)
+                      </span>
+                   <div onclick="$('#0_3').css('display','none')" style="display: none" id="0_3">
+                   <ol>
+<li>gregson : 62.64</li>
+<li>armitage : 59.94</li>
+<li>game-keeper : 51.90</li>
+<li>cocaine : 50.72</li>
+<li>ferrier : 50.30</li>
+<li>fellow-lodger : 48.51</li>
+<li>derbyshire : 45.54</li>
+<li>terrorize : 42.91</li>
+<li>afghanistan : 42.61</li>
+<li>night-light : 36.38</li>
+<li>dreadful-looking : 28.92</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  570.4
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_4').css('display', $('#0_4').css('display') === 'block' ? 'none' : 'block')">
+                          【The War of the Worlds】：H. G.  Wells (4938)
+                      </span>
+                   <div onclick="$('#0_4').css('display','none')" style="display: none" id="0_4">
+                   <ol>
+<li>leatherhead : 66.47</li>
+<li>kilburn : 61.33</li>
+<li>_daily : 59.50</li>
+<li>disorganised : 50.72</li>
+<li>dodo : 49.41</li>
+<li>haggerston : 48.51</li>
+<li>balloonist : 42.91</li>
+<li>cyclone : 31.90</li>
+<li>riverbank : 25.09</li>
+<li>downstream : 24.88</li>
+<li>jointed : 22.19</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  504.9
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_5').css('display', $('#0_5').css('display') === 'block' ? 'none' : 'block')">
+                          【The Count of Monte Cristo】：Alexandre Dumas (7859)
+                      </span>
+                   <div onclick="$('#0_5').css('display','none')" style="display: none" id="0_5">
+                   <ol>
+<li>posting-house : 60.47</li>
+<li>guinea-pigs : 58.67</li>
+<li>carriage-door : 54.84</li>
+<li>bell-pull : 52.63</li>
+<li>breakfast-hour : 48.51</li>
+<li>savage-looking : 48.51</li>
+<li>rose-tree : 45.95</li>
+<li>gaudiness : 42.91</li>
+<li>gold-headed : 42.91</li>
+<li>half-carrying : 42.91</li>
+<li>cucumetto : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  498.3
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_6').css('display', $('#0_6').css('display') === 'block' ? 'none' : 'block')">
+                          【Around the World in Eighty Days】：Jules Verne (5587)
+                      </span>
+                   <div onclick="$('#0_6').css('display','none')" style="display: none" id="0_6">
+                   <ol>
+<li>brigham : 58.67</li>
+<li>nauvoo : 54.84</li>
+<li>seventy-eight : 50.72</li>
+<li>omaha : 49.92</li>
+<li>forster : 45.75</li>
+<li>mormon : 45.59</li>
+<li>utah : 45.05</li>
+<li>pawnee : 43.95</li>
+<li>kansa : 37.38</li>
+<li>cheshire : 36.05</li>
+<li>mantel : 22.01</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  489.9
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_7').css('display', $('#0_7').css('display') === 'block' ? 'none' : 'block')">
+                          【Through the Looking-Glass】：Lewis Carroll (5040)
+                      </span>
+                   <div onclick="$('#0_7').css('display','none')" style="display: none" id="0_7">
+                   <ol>
+<li>dinah : 46.46</li>
+<li>carroll : 43.95</li>
+<li>to. : 42.91</li>
+<li>half-laughing : 42.91</li>
+<li>queer-shaped : 42.91</li>
+<li>course. : 42.18</li>
+<li>theyd : 34.39</li>
+<li>to-day. : 34.39</li>
+<li>wiggling : 34.39</li>
+<li>on. : 32.69</li>
+<li>wonderland : 30.95</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  483.8
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_8').css('display', $('#0_8').css('display') === 'block' ? 'none' : 'block')">
+                          【Jane Eyre】：Charlotte Brontë (12164)
+                      </span>
+                   <div onclick="$('#0_8').css('display','none')" style="display: none" id="0_8">
+                   <ol>
+<li>georgiana : 56.60</li>
+<li>lizzy : 55.62</li>
+<li>coach-door : 50.72</li>
+<li>carton : 44.63</li>
+<li>cheese-cakes : 42.91</li>
+<li>heavily-laden : 42.91</li>
+<li>gurgled : 42.91</li>
+<li>brownie : 34.39</li>
+<li>lesson-books : 34.39</li>
+<li>comfit : 32.69</li>
+<li>edwin : 32.69</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  470.5
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_9').css('display', $('#0_9').css('display') === 'block' ? 'none' : 'block')">
+                          【The Return of Sherlock Holmes】：Arthur Conan Doyle (4071)
+                      </span>
+                   <div onclick="$('#0_9').css('display','none')" style="display: none" id="0_9">
+                   <ol>
+<li>lodge-keeper : 59.50</li>
+<li>moran : 55.77</li>
+<li>dinghy : 50.72</li>
+<li>lestrade : 48.43</li>
+<li>fairy-tales : 42.91</li>
+<li>red-rimmed : 42.91</li>
+<li>half-confidences : 42.91</li>
+<li>stamford : 36.60</li>
+<li>greensward : 25.00</li>
+<li>middle-sized : 22.01</li>
+<li>woodman : 21.09</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  447.9
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_10').css('display', $('#0_10').css('display') === 'block' ? 'none' : 'block')">
+                          【Moby Dick; Or, The Whale】：Herman Melville (10593)
+                      </span>
+                   <div onclick="$('#0_10').css('display','none')" style="display: none" id="0_10">
+                   <ol>
+<li>oil-can : 64.01</li>
+<li>riding-whips : 54.84</li>
+<li>boone : 53.77</li>
+<li>dissociated : 48.51</li>
+<li>missent : 48.51</li>
+<li>mealy-mouthed : 48.51</li>
+<li>beaching : 42.91</li>
+<li>hone : 42.91</li>
+<li>story. : 40.65</li>
+<li>baleen : 0.0</li>
+<li>lakeman : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  444.6
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_11').css('display', $('#0_11').css('display') === 'block' ? 'none' : 'block')">
+                          【This Side of Paradise】：F. Scott  Fitzgerald (4069)
+                      </span>
+                   <div onclick="$('#0_11').css('display','none')" style="display: none" id="0_11">
+                   <ol>
+<li>ryder : 69.46</li>
+<li>barrie : 57.33</li>
+<li>hurst : 55.29</li>
+<li>darcy : 48.00</li>
+<li>_making_ : 42.91</li>
+<li>underscore : 42.91</li>
+<li>tink : 37.39</li>
+<li>mabel : 34.97</li>
+<li>modernized : 28.92</li>
+<li>marylyn : 0.0</li>
+<li>d'invilliers : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  417.2
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_12').css('display', $('#0_12').css('display') === 'block' ? 'none' : 'block')">
+                          【Grimms&#39; Fairy Tales】：Jacob Grimm and Wilhelm Grimm (22246)
+                      </span>
+                   <div onclick="$('#0_12').css('display','none')" style="display: none" id="0_12">
+                   <ol>
+<li>together. : 48.51</li>
+<li>quacking : 48.51</li>
+<li>house-top : 48.51</li>
+<li>rose-tree : 45.95</li>
+<li>land. : 42.91</li>
+<li>cinderella : 35.47</li>
+<li>sea. : 34.39</li>
+<li>grimm : 30.23</li>
+<li>woodman : 22.01</li>
+<li>mewed : 22.01</li>
+<li>scampered : 19.40</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  397.9
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_13').css('display', $('#0_13').css('display') === 'block' ? 'none' : 'block')">
+                          【Adventures of Huckleberry Finn】：Mark Twain (18792)
+                      </span>
+                   <div onclick="$('#0_13').css('display','none')" style="display: none" id="0_13">
+                   <ol>
+<li>mumps : 51.14</li>
+<li>_heard_ : 48.51</li>
+<li>a-trembling : 48.51</li>
+<li>log-house : 43.95</li>
+<li>afeared : 43.95</li>
+<li>sneaky : 42.91</li>
+<li>_two_ : 40.65</li>
+<li>bran-new : 34.39</li>
+<li>genie : 26.62</li>
+<li>hair-ball : 0.0</li>
+<li>clumb : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  380.6
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_14').css('display', $('#0_14').css('display') === 'block' ? 'none' : 'block')">
+                          【Treasure Island】：Robert Louis Stevenson (7144)
+                      </span>
+                   <div onclick="$('#0_14').css('display','none')" style="display: none" id="0_14">
+                   <ol>
+<li>sea-cook : 61.03</li>
+<li>log-house : 49.49</li>
+<li>kidd : 48.51</li>
+<li>blackbeard : 48.51</li>
+<li>belay : 45.95</li>
+<li>barbecue : 44.94</li>
+<li>dreadful-looking : 28.92</li>
+<li>one-legged : 28.26</li>
+<li>sea-cloth : 0.0</li>
+<li>lop-sided : 0.0</li>
+<li>itt : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  355.6
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_15').css('display', $('#0_15').css('display') === 'block' ? 'none' : 'block')">
+                          【The Story of My Life】：Helen Keller (4877)
+                      </span>
+                   <div onclick="$('#0_15').css('display','none')" style="display: none" id="0_15">
+                   <ol>
+<li>bradstreet : 61.53</li>
+<li>sunbonnet : 48.51</li>
+<li>bed-posts : 42.91</li>
+<li>barbecue : 36.05</li>
+<li>andersen : 32.69</li>
+<li>wonderland : 30.95</li>
+<li>barnyard : 28.92</li>
+<li>buttercup : 23.62</li>
+<li>underbrush : 22.19</li>
+<li>brocaded : 22.01</li>
+<li>brattle : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  349.4
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_16').css('display', $('#0_16').css('display') === 'block' ? 'none' : 'block')">
+                          【Secret Adversary】：Agatha Christie (5452)
+                      </span>
+                   <div onclick="$('#0_16').css('display','none')" style="display: none" id="0_16">
+                   <ol>
+<li>audley : 51.14</li>
+<li>james's : 45.95</li>
+<li>uneventfully : 42.91</li>
+<li>tap-tap : 42.91</li>
+<li>pooh-pooh : 42.91</li>
+<li>alf : 38.88</li>
+<li>mabel : 34.97</li>
+<li>treacle : 30.66</li>
+<li>sweeny : 0.0</li>
+<li>tuppence's : 0.0</li>
+<li>julius's : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  330.3
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_17').css('display', $('#0_17').css('display') === 'block' ? 'none' : 'block')">
+                          【Anne of Green Gables】：L. M.  Montgomery (5722)
+                      </span>
+                   <div onclick="$('#0_17').css('display','none')" style="display: none" id="0_17">
+                   <ol>
+<li>tillie : 51.90</li>
+<li>bumpy : 42.91</li>
+<li>grayer : 38.88</li>
+<li>odd-looking : 32.69</li>
+<li>wonderland : 30.95</li>
+<li>cooky : 28.92</li>
+<li>gingham : 27.22</li>
+<li>someday : 26.62</li>
+<li>cozy : 25.00</li>
+<li>buttercup : 24.17</li>
+<li>buote : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  329.3
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_18').css('display', $('#0_18').css('display') === 'block' ? 'none' : 'block')">
+                          【Walden】：Henry David Thoreau (5523)
+                      </span>
+                   <div onclick="$('#0_18').css('display','none')" style="display: none" id="0_18">
+                   <ol>
+<li>hosmer : 55.07</li>
+<li>woodchopper : 51.90</li>
+<li>raggedly : 48.51</li>
+<li>brighton : 37.13</li>
+<li>cinderella : 35.47</li>
+<li>farmer's : 34.18</li>
+<li>soldering : 32.69</li>
+<li>fyne : 0.0</li>
+<li>fitchburg : 0.0</li>
+<li>hounding : 0.0</li>
+<li>sudbury : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  294.9
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_19').css('display', $('#0_19').css('display') === 'block' ? 'none' : 'block')">
+                          【Sense and Sensibility】：Jane Austen (5332)
+                      </span>
+                   <div onclick="$('#0_19').css('display','none')" style="display: none" id="0_19">
+                   <ol>
+<li>charlotte's : 50.72</li>
+<li>incommode : 48.51</li>
+<li>turnpike-road : 42.91</li>
+<li>impolitic : 42.91</li>
+<li>unstudied : 42.91</li>
+<li>self-consequence : 38.88</li>
+<li>make-believe : 22.01</li>
+<li>robert's : 0.0</li>
+<li>marianne's : 0.0</li>
+<li>jennings's : 0.0</li>
+<li>donavan : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  288.8
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_20').css('display', $('#0_20').css('display') === 'block' ? 'none' : 'block')">
+                          【Anna Karenina】：graf Leo Tolstoy (5225)
+                      </span>
+                   <div onclick="$('#0_20').css('display','none')" style="display: none" id="0_20">
+                   <ol>
+<li>liza : 55.64</li>
+<li>saddling : 54.84</li>
+<li>croquet-ground : 50.72</li>
+<li>croquet : 44.44</li>
+<li>quo_ : 42.91</li>
+<li>brownie : 38.88</li>
+<li>mihailov : 0.0</li>
+<li>veslovsky : 0.0</li>
+<li>oblonsky : 0.0</li>
+<li>levin’s : 0.0</li>
+<li>vronsky’s : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  287.4
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_21').css('display', $('#0_21').css('display') === 'block' ? 'none' : 'block')">
+                          【The Jungle Book】：Rudyard Kipling (5247)
+                      </span>
+                   <div onclick="$('#0_21').css('display','none')" style="display: none" id="0_21">
+                   <ol>
+<li>tom-tom : 49.85</li>
+<li>sugar-cane : 42.91</li>
+<li>afghanistan : 42.61</li>
+<li>grown-ups : 38.88</li>
+<li>wow : 30.95</li>
+<li>porpoise : 29.55</li>
+<li>wolf's : 28.92</li>
+<li>rusted : 22.24</li>
+<li>jungle-people : 0.0</li>
+<li>kaa : 0.0</li>
+<li>nagaina : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  285.9
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_22').css('display', $('#0_22').css('display') === 'block' ? 'none' : 'block')">
+                          【Dracula】：Bram Stoker (9135)
+                      </span>
+                   <div onclick="$('#0_22').css('display','none')" style="display: none" id="0_22">
+                   <ol>
+<li>somethin : 45.95</li>
+<li>offensiveness : 42.91</li>
+<li>afeared : 38.88</li>
+<li>soldering : 32.69</li>
+<li>andersen : 28.92</li>
+<li>cozy : 25.00</li>
+<li>angrier : 25.00</li>
+<li>solder : 22.19</li>
+<li>blood-curdling : 22.01</li>
+<li>tate : 0.0</li>
+<li>lucy's : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  283.6
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_23').css('display', $('#0_23').css('display') === 'block' ? 'none' : 'block')">
+                          【Emma】：Jane Austen (7547)
+                      </span>
+                   <div onclick="$('#0_23').css('display','none')" style="display: none" id="0_23">
+                   <ol>
+<li>suitableness : 50.72</li>
+<li>hot-pressed : 42.91</li>
+<li>dining-parlour : 41.59</li>
+<li>_two_ : 40.65</li>
+<li>self-consequence : 38.88</li>
+<li>greensward : 25.00</li>
+<li>chuses : 0.0</li>
+<li>harriet's : 0.0</li>
+<li>smallridge : 0.0</li>
+<li>selina : 0.0</li>
+<li>court-plaister : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  239.7
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_24').css('display', $('#0_24').css('display') === 'block' ? 'none' : 'block')">
+                          【The Adventures of Tom Sawyer】：Mark Twain (14688)
+                      </span>
+                   <div onclick="$('#0_24').css('display','none')" style="display: none" id="0_24">
+                   <ol>
+<li>jack-boots : 48.51</li>
+<li>day-school : 42.91</li>
+<li>jeweled : 32.69</li>
+<li>one-legged : 25.00</li>
+<li>riverbank : 22.19</li>
+<li>blood-curdling : 22.01</li>
+<li>downstream : 22.01</li>
+<li>underbrush : 19.63</li>
+<li>hollis : 0.0</li>
+<li>meow : 0.0</li>
+<li>maow : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  234.9
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_25').css('display', $('#0_25').css('display') === 'block' ? 'none' : 'block')">
+                          【Three Men in a Boat】：Jerome K.  Jerome (7618)
+                      </span>
+                   <div onclick="$('#0_25').css('display','none')" style="display: none" id="0_25">
+                   <ol>
+<li>full-bodied : 48.51</li>
+<li>star-fish : 42.91</li>
+<li>ramsgate : 40.65</li>
+<li>_yours_ : 38.88</li>
+<li>croquet : 35.47</li>
+<li>blood-curdling : 26.01</li>
+<li>medmenham : 0.0</li>
+<li>ain’t : 0.0</li>
+<li>slossenn : 0.0</li>
+<li>paraffine : 0.0</li>
+<li>bisham : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  232.4
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_26').css('display', $('#0_26').css('display') === 'block' ? 'none' : 'block')">
+                          【The Girl Next Door】：Augusta Huiell Seaman (7980)
+                      </span>
+                   <div onclick="$('#0_26').css('display','none')" style="display: none" id="0_26">
+                   <ol>
+<li>sailing-ship : 50.72</li>
+<li>_spoke_ : 42.91</li>
+<li>grown-ups : 38.88</li>
+<li>edwin : 36.96</li>
+<li>cozy : 28.26</li>
+<li>slat : 23.74</li>
+<li>fagg : 0.0</li>
+<li>bidwell : 0.0</li>
+<li>treadwell : 0.0</li>
+<li>market-basket : 0.0</li>
+<li>grocery-shop : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  221.5
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_27').css('display', $('#0_27').css('display') === 'block' ? 'none' : 'block')">
+                          【The Prince and the Pauper】：Mark Twain (4685)
+                      </span>
+                   <div onclick="$('#0_27').css('display','none')" style="display: none" id="0_27">
+                   <ol>
+<li>gracechurch : 53.99</li>
+<li>grimmest : 38.88</li>
+<li>beheading : 34.39</li>
+<li>make-believe : 22.01</li>
+<li>middle-sized : 22.01</li>
+<li>scampered : 21.93</li>
+<li>dearilee : 0.0</li>
+<li>mannerless : 0.0</li>
+<li>ridley : 0.0</li>
+<li>bridgy : 0.0</li>
+<li>_thee_ : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  193.2
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_28').css('display', $('#0_28').css('display') === 'block' ? 'none' : 'block')">
+                          【Persuasion】：Jane Austen (3912)
+                      </span>
+                   <div onclick="$('#0_28').css('display','none')" style="display: none" id="0_28">
+                   <ol>
+<li>a-shooting : 42.91</li>
+<li>re-kindled : 42.91</li>
+<li>unforgiving : 38.88</li>
+<li>cheshire : 36.05</li>
+<li>odd-looking : 28.92</li>
+<li>crewkherne : 0.0</li>
+<li>dalrymple : 0.0</li>
+<li>harvilles : 0.0</li>
+<li>carteret : 0.0</li>
+<li>monkford : 0.0</li>
+<li>rooke : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  189.7
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_29').css('display', $('#0_29').css('display') === 'block' ? 'none' : 'block')">
+                          【Beowulf (14142)
+                      </span>
+                   <div onclick="$('#0_29').css('display','none')" style="display: none" id="0_29">
+                   <ol>
+<li>atheling : 55.20</li>
+<li>boar-spears : 48.51</li>
+<li>_page_ : 42.91</li>
+<li>grimmest : 38.88</li>
+<li>eofor : 0.0</li>
+<li>liegelord : 0.0</li>
+<li>danemen : 0.0</li>
+<li>unferth : 0.0</li>
+<li>ongentheow : 0.0</li>
+<li>healfdene : 0.0</li>
+<li>ecgtheow : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  185.5
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_30').css('display', $('#0_30').css('display') === 'block' ? 'none' : 'block')">
+                          【Beyond Good and Evil】：Friedrich Wilhelm Nietzsche (7787)
+                      </span>
+                   <div onclick="$('#0_30').css('display','none')" style="display: none" id="0_30">
+                   <ol>
+<li>uglifying : 48.51</li>
+<li>synthetically : 42.91</li>
+<li>capitalized : 38.88</li>
+<li>dispenses : 25.00</li>
+<li>genie : 22.01</li>
+<li>niaiserie : 0.0</li>
+<li>non-freedom : 0.0</li>
+<li>dangerousness : 0.0</li>
+<li>counter-arguments : 0.0</li>
+<li>atomism : 0.0</li>
+<li>sensualism : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  177.3
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_31').css('display', $('#0_31').css('display') === 'block' ? 'none' : 'block')">
+                          【The Call of the Wild】：Jack London (5358)
+                      </span>
+                   <div onclick="$('#0_31').css('display','none')" style="display: none" id="0_31">
+                   <ol>
+<li>axe-handle : 48.51</li>
+<li>chemically : 42.91</li>
+<li>riding-whip : 40.65</li>
+<li>mewed : 22.01</li>
+<li>underbrush : 19.63</li>
+<li>team-dogs : 0.0</li>
+<li>southland : 0.0</li>
+<li>nig : 0.0</li>
+<li>skeet : 0.0</li>
+<li>skaguay : 0.0</li>
+<li>saloon-keeper : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  173.7
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_32').css('display', $('#0_32').css('display') === 'block' ? 'none' : 'block')">
+                          【Prestuplenie i nakazanie. English】：Fyodor Dostoyevsky (4062)
+                      </span>
+                   <div onclick="$('#0_32').css('display','none')" style="display: none" id="0_32">
+                   <ol>
+<li>jewel-case : 62.76</li>
+<li>person_ : 42.91</li>
+<li>dormouse : 32.26</li>
+<li>treacle : 30.66</li>
+<li>arkady : 0.0</li>
+<li>rodya : 0.0</li>
+<li>pulcheria : 0.0</li>
+<li>romanovna : 0.0</li>
+<li>avdotya : 0.0</li>
+<li>luzhin : 0.0</li>
+<li>rodion : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  168.6
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_33').css('display', $('#0_33').css('display') === 'block' ? 'none' : 'block')">
+                          【Complete Original Short Stories of Guy De Maupassant】：Guy de Maupassant (4969)
+                      </span>
+                   <div onclick="$('#0_33').css('display','none')" style="display: none" id="0_33">
+                   <ol>
+<li>lecoq : 63.55</li>
+<li>tinsmith : 52.63</li>
+<li>precipitance : 48.51</li>
+<li>cimme : 0.0</li>
+<li>cesaire : 0.0</li>
+<li>maupassant : 0.0</li>
+<li>tellier : 0.0</li>
+<li>toine : 0.0</li>
+<li>saval : 0.0</li>
+<li>marambot : 0.0</li>
+<li>boivin : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  164.7
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_34').css('display', $('#0_34').css('display') === 'block' ? 'none' : 'block')">
+                          【Andersen&#39;s Fairy Tales】：H. C.  Andersen (3997)
+                      </span>
+                   <div onclick="$('#0_34').css('display','none')" style="display: none" id="0_34">
+                   <ol>
+<li>tea-party : 54.84</li>
+<li>andersen : 36.24</li>
+<li>turn-up : 34.39</li>
+<li>rusted : 22.24</li>
+<li>stork : 16.37</li>
+<li>roeskilde : 0.0</li>
+<li>elderbush : 0.0</li>
+<li>kjoge : 0.0</li>
+<li>kitchen-pot : 0.0</li>
+<li>waldemar : 0.0</li>
+<li>ivedy-avedy : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  164.1
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_35').css('display', $('#0_35').css('display') === 'block' ? 'none' : 'block')">
+                          【Myths and Legends of Ancient Greece and Rome】：E.M. Berens (6365)
+                      </span>
+                   <div onclick="$('#0_35').css('display','none')" style="display: none" id="0_35">
+                   <ol>
+<li>snow-capped : 57.33</li>
+<li>stepfather : 49.83</li>
+<li>war-cry : 48.51</li>
+<li>thanatos : 0.0</li>
+<li>pallas-athene : 0.0</li>
+<li>pirith旦us : 0.0</li>
+<li>a谷tes : 0.0</li>
+<li>augeas : 0.0</li>
+<li>nyx : 0.0</li>
+<li>alcmene : 0.0</li>
+<li>cr谷usa : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  155.6
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_36').css('display', $('#0_36').css('display') === 'block' ? 'none' : 'block')">
+                          【Dubliners】：James Joyce (6939)
+                      </span>
+                   <div onclick="$('#0_36').css('display','none')" style="display: none" id="0_36">
+                   <ol>
+<li>doran : 53.50</li>
+<li>ada : 48.51</li>
+<li>yellowing : 28.92</li>
+<li>riverbank : 22.19</li>
+<li>hendrick : 0.0</li>
+<li>duffy : 0.0</li>
+<li>delacour : 0.0</li>
+<li>alphy : 0.0</li>
+<li>riviere : 0.0</li>
+<li>furey : 0.0</li>
+<li>keon : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  153.1
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_37').css('display', $('#0_37').css('display') === 'block' ? 'none' : 'block')">
+                          【A Connecticut Yankee in King Arthur&#39;s Court】：Mark Twain (5185)
+                      </span>
+                   <div onclick="$('#0_37').css('display','none')" style="display: none" id="0_37">
+                   <ol>
+<li>gabelle : 55.20</li>
+<li>whitney : 53.77</li>
+<li>unassailed : 42.91</li>
+<li>madok : 0.0</li>
+<li>gareth : 0.0</li>
+<li>milrays : 0.0</li>
+<li>uwaine : 0.0</li>
+<li>alisande : 0.0</li>
+<li>dinadan : 0.0</li>
+<li>hello-central : 0.0</li>
+<li>king's-evil : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  151.8
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_38').css('display', $('#0_38').css('display') === 'block' ? 'none' : 'block')">
+                          【Leaves of Grass】：Walt Whitman (18743)
+                      </span>
+                   <div onclick="$('#0_38').css('display','none')" style="display: none" id="0_38">
+                   <ol>
+<li>burial-places : 54.84</li>
+<li>gulch : 50.72</li>
+<li>kansa : 45.84</li>
+<li>convuls : 0.0</li>
+<li>may-be : 0.0</li>
+<li>brooklyn : 0.0</li>
+<li>en-masse : 0.0</li>
+<li>kanada : 0.0</li>
+<li>tallying : 0.0</li>
+<li>orbic : 0.0</li>
+<li>kanadian : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  151.4
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_39').css('display', $('#0_39').css('display') === 'block' ? 'none' : 'block')">
+                          【Frankenstein】：Mary Wollstonecraft Shelley (9150)
+                      </span>
+                   <div onclick="$('#0_39').css('display','none')" style="display: none" id="0_39">
+                   <ol>
+<li>matlock : 57.33</li>
+<li>unallied : 42.91</li>
+<li>sure-footed : 42.91</li>
+<li>petersburgh : 0.0</li>
+<li>ingolstadt : 0.0</li>
+<li>kirwin : 0.0</li>
+<li>waldman : 0.0</li>
+<li>krempe : 0.0</li>
+<li>lacey : 0.0</li>
+<li>chamounix : 0.0</li>
+<li>belrive : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  143.1
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_40').css('display', $('#0_40').css('display') === 'block' ? 'none' : 'block')">
+                          【Thus Spake Zarathustra】：Friedrich Wilhelm Nietzsche (3995)
+                      </span>
+                   <div onclick="$('#0_40').css('display','none')" style="display: none" id="0_40">
+                   <ol>
+<li>non-conformist : 42.91</li>
+<li>mouse-traps : 42.91</li>
+<li>waggle : 42.91</li>
+<li>rope-dancer : 0.0</li>
+<li>ass-festival : 0.0</li>
+<li>backworldsmen : 0.0</li>
+<li>marriage-ring : 0.0</li>
+<li>load-bearing : 0.0</li>
+<li>forsakenness : 0.0</li>
+<li>neighbour-love : 0.0</li>
+<li>emancipator : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  128.7
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_41').css('display', $('#0_41').css('display') === 'block' ? 'none' : 'block')">
+                          【The Mysterious Affair at Styles】：Agatha Christie (6019)
+                      </span>
+                   <div onclick="$('#0_41').css('display','none')" style="display: none" id="0_41">
+                   <ol>
+<li>nib : 45.11</li>
+<li>toxicologist : 42.91</li>
+<li>croquet : 40.10</li>
+<li>sceptically : 0.0</li>
+<li>tadminster : 0.0</li>
+<li>despatch-case : 0.0</li>
+<li>inglethorp's : 0.0</li>
+<li>raikes : 0.0</li>
+<li>summerhaye : 0.0</li>
+<li>murdoch : 0.0</li>
+<li>heavywether : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  128.1
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_42').css('display', $('#0_42').css('display') === 'block' ? 'none' : 'block')">
+                          【The Picture of Dorian Gray】：Oscar Wilde (8551)
+                      </span>
+                   <div onclick="$('#0_42').css('display','none')" style="display: none" id="0_42">
+                   <ol>
+<li>audley : 45.95</li>
+<li>lodging-houses : 42.91</li>
+<li>james's : 38.88</li>
+<li>mist-stained : 0.0</li>
+<li>ferrol : 0.0</li>
+<li>treadley : 0.0</li>
+<li>frame-maker : 0.0</li>
+<li>gold-thread : 0.0</li>
+<li>agatha's : 0.0</li>
+<li>curzon : 0.0</li>
+<li>carlington : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  127.7
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_43').css('display', $('#0_43').css('display') === 'block' ? 'none' : 'block')">
+                          【How to Analyze People on Sight】：Elsie Lincoln Benedict and Ralph Paine Benedict (15698)
+                      </span>
+                   <div onclick="$('#0_43').css('display','none')" style="display: none" id="0_43">
+                   <ol>
+<li>pudgy : 48.51</li>
+<li>capitalized : 45.95</li>
+<li>dorothy : 31.95</li>
+<li>over-developed : 0.0</li>
+<li>pugnacity : 0.0</li>
+<li>cerebrals : 0.0</li>
+<li>merchandizing : 0.0</li>
+<li>_remember : 0.0</li>
+<li>large-headed : 0.0</li>
+<li>salesmanship : 0.0</li>
+<li>capitalizes : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  126.4
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_44').css('display', $('#0_44').css('display') === 'block' ? 'none' : 'block')">
+                          【Manon Lescaut】：Abbé Prévost (14239)
+                      </span>
+                   <div onclick="$('#0_44').css('display','none')" style="display: none" id="0_44">
+                   <ol>
+<li>plan. : 42.91</li>
+<li>regimentals : 40.65</li>
+<li>is. : 29.55</li>
+<li>jansenist : 0.0</li>
+<li>grieux : 0.0</li>
+<li>manon's : 0.0</li>
+<li>manon. : 0.0</li>
+<li>abb辿 : 0.0</li>
+<li>pr辿vost : 0.0</li>
+<li>andre-des-arcs : 0.0</li>
+<li>louis-d'ors : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  113.1
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_45').css('display', $('#0_45').css('display') === 'block' ? 'none' : 'block')">
+                          【Narrative of the Life of Frederick Douglass】：Frederick Douglass (4695)
+                      </span>
+                   <div onclick="$('#0_45').css('display','none')" style="display: none" id="0_45">
+                   <ol>
+<li>whipping-post : 54.84</li>
+<li>cornfield : 22.61</li>
+<li>slat : 19.63</li>
+<li>stork : 14.48</li>
+<li>allowance-day : 0.0</li>
+<li>michael's : 0.0</li>
+<li>ship-yard : 0.0</li>
+<li>slaveholding : 0.0</li>
+<li>demby : 0.0</li>
+<li>calking : 0.0</li>
+<li>out-farms : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  111.5
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_46').css('display', $('#0_46').css('display') === 'block' ? 'none' : 'block')">
+                          【Pennsylvania Dutch Cooking】：Unknown (4634)
+                      </span>
+                   <div onclick="$('#0_46').css('display','none')" style="display: none" id="0_46">
+                   <ol>
+<li>oz : 44.63</li>
+<li>cooky : 37.07</li>
+<li>folklore : 28.92</li>
+<li>horseradish : 0.0</li>
+<li>diced : 0.0</li>
+<li>floured : 0.0</li>
+<li>qts : 0.0</li>
+<li>casserole : 0.0</li>
+<li>griddle : 0.0</li>
+<li>375-f : 0.0</li>
+<li>cookie : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  110.6
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_47').css('display', $('#0_47').css('display') === 'block' ? 'none' : 'block')">
+                          【A Christmas Carol】：Charles Dickens (5690)
+                      </span>
+                   <div onclick="$('#0_47').css('display','none')" style="display: none" id="0_47">
+                   <ol>
+<li>niece's : 48.51</li>
+<li>bran-new : 34.39</li>
+<li>rhinoceros : 25.00</li>
+<li>race-horses : 0.0</li>
+<li>dilber : 0.0</li>
+<li>apple-sauce : 0.0</li>
+<li>scrooge's : 0.0</li>
+<li>hilli-ho : 0.0</li>
+<li>marley : 0.0</li>
+<li>ebenezer : 0.0</li>
+<li>thank'ee : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  107.9
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_48').css('display', $('#0_48').css('display') === 'block' ? 'none' : 'block')">
+                          【The Prince】：Niccolò Machiavelli (17913)
+                      </span>
+                   <div onclick="$('#0_48').css('display','none')" style="display: none" id="0_48">
+                   <ol>
+<li>participators : 42.91</li>
+<li>cecco : 36.68</li>
+<li>brocaded : 22.01</li>
+<li>venafro : 0.0</li>
+<li>sinigalia : 0.0</li>
+<li>bentivogli : 0.0</li>
+<li>montecarlo : 0.0</li>
+<li>ruberto : 0.0</li>
+<li>vaila : 0.0</li>
+<li>pertinax : 0.0</li>
+<li>pisans : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  101.6
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_49').css('display', $('#0_49').css('display') === 'block' ? 'none' : 'block')">
+                          【Robinson Crusoe】：Daniel Defoe (4106)
+                      </span>
+                   <div onclick="$('#0_49').css('display','none')" style="display: none" id="0_49">
+                   <ol>
+<li>leadenhall : 52.63</li>
+<li>hedging : 42.91</li>
+<li>rice-straw : 0.0</li>
+<li>goat’s : 0.0</li>
+<li>_nov._ : 0.0</li>
+<li>_dec._ : 0.0</li>
+<li>“friday : 0.0</li>
+<li>friday’s : 0.0</li>
+<li>seamen’s : 0.0</li>
+<li>periagua : 0.0</li>
+<li>patron’s : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  95.55
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_50').css('display', $('#0_50').css('display') === 'block' ? 'none' : 'block')">
+                          【The Importance of Being Earnest】：Oscar Wilde (13475)
+                      </span>
+                   <div onclick="$('#0_50').css('display','none')" style="display: none" id="0_50">
+                   <ol>
+<li>hertfordshire : 50.18</li>
+<li>brighton : 41.98</li>
+<li>algernon : 0.0</li>
+<li>cardew : 0.0</li>
+<li>moncrieff : 0.0</li>
+<li>bunburyist : 0.0</li>
+<li>markby : 0.0</li>
+<li>bunburying : 0.0</li>
+<li>belgrave : 0.0</li>
+<li>woolton : 0.0</li>
+<li>emigrating : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  92.16
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_51').css('display', $('#0_51').css('display') === 'block' ? 'none' : 'block')">
+                          【The Romance of Lust】：Anonymous (5331)
+                      </span>
+                   <div onclick="$('#0_51').css('display','none')" style="display: none" id="0_51">
+                   <ol>
+<li>boylike : 48.51</li>
+<li>after-time : 34.39</li>
+<li>bubby : 0.0</li>
+<li>pego : 0.0</li>
+<li>frigged : 0.0</li>
+<li>salacious : 0.0</li>
+<li>arsehole : 0.0</li>
+<li>maccallum : 0.0</li>
+<li>gamahuching : 0.0</li>
+<li>quim : 0.0</li>
+<li>bubbies : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  82.91
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_52').css('display', $('#0_52').css('display') === 'block' ? 'none' : 'block')">
+                          【The Time Machine】：H. G.  Wells (4238)
+                      </span>
+                   <div onclick="$('#0_52').css('display','none')" style="display: none" id="0_52">
+                   <ol>
+<li>adventures. : 34.39</li>
+<li>mantel : 26.01</li>
+<li>downstream : 22.01</li>
+<li>aluminium : 0.0</li>
+<li>morlock : 0.0</li>
+<li>crematorium : 0.0</li>
+<li>watchett : 0.0</li>
+<li>time-dimension : 0.0</li>
+<li>ventilating : 0.0</li>
+<li>over-world : 0.0</li>
+<li>three-dimensional : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  82.43
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_53').css('display', $('#0_53').css('display') === 'block' ? 'none' : 'block')">
+                          【A Princess of Mars】：Edgar Rice Burroughs (7787)
+                      </span>
+                   <div onclick="$('#0_53').css('display','none')" style="display: none" id="0_53">
+                   <ol>
+<li>jeweled : 36.96</li>
+<li>someday : 22.01</li>
+<li>scampered : 19.40</li>
+<li>jed : 0.0</li>
+<li>barsoom : 0.0</li>
+<li>hajus : 0.0</li>
+<li>jeddak : 0.0</li>
+<li>zodanga : 0.0</li>
+<li>thark : 0.0</li>
+<li>kantos : 0.0</li>
+<li>sarkoja : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  78.38
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_54').css('display', $('#0_54').css('display') === 'block' ? 'none' : 'block')">
+                          【Myths and Legends of China】：E. T. C.  Werner (4010)
+                      </span>
+                   <div onclick="$('#0_54').css('display','none')" style="display: none" id="0_54">
+                   <ol>
+<li>tom-tom : 47.69</li>
+<li>rhinoceros : 29.55</li>
+<li>t'ien : 0.0</li>
+<li>y端 : 0.0</li>
+<li>kuan : 0.0</li>
+<li>huang : 0.0</li>
+<li>sh棚n : 0.0</li>
+<li>no-cha : 0.0</li>
+<li>taoist : 0.0</li>
+<li>tzu-ya : 0.0</li>
+<li>chuang : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  77.24
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_55').css('display', $('#0_55').css('display') === 'block' ? 'none' : 'block')">
+                          【The Hound of the Baskervilles】：Arthur Conan Doyle (4771)
+                      </span>
+                   <div onclick="$('#0_55').css('display','none')" style="display: none" id="0_55">
+                   <ol>
+<li>lestrade : 47.15</li>
+<li>well-polished : 28.92</li>
+<li>hip-pocket : 0.0</li>
+<li>baskervilles : 0.0</li>
+<li>merripit : 0.0</li>
+<li>stapletons : 0.0</li>
+<li>moor-gate : 0.0</li>
+<li>barrymore : 0.0</li>
+<li>lafter : 0.0</li>
+<li>rodger : 0.0</li>
+<li>princetown : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  76.08
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_56').css('display', $('#0_56').css('display') === 'block' ? 'none' : 'block')">
+                          【The Divine Comedy】：Dante, Illustrated】：Dante Alighieri (22542)
+                      </span>
+                   <div onclick="$('#0_56').css('display','none')" style="display: none" id="0_56">
+                   <ol>
+<li>gryphon : 69.17</li>
+<li>behov : 0.0</li>
+<li>rightward : 0.0</li>
+<li>sculptur : 0.0</li>
+<li>imag : 0.0</li>
+<li>michol : 0.0</li>
+<li>guittone : 0.0</li>
+<li>sev'nfold : 0.0</li>
+<li>direr : 0.0</li>
+<li>unmov'd : 0.0</li>
+<li>lav : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  69.17
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_57').css('display', $('#0_57').css('display') === 'block' ? 'none' : 'block')">
+                          【Studies in the Psychology of Sex, Volume 1】：Havelock Ellis (7777)
+                      </span>
+                   <div onclick="$('#0_57').css('display','none')" style="display: none" id="0_57">
+                   <ol>
+<li>adler : 69.12</li>
+<li>onanism : 0.0</li>
+<li>coitus : 0.0</li>
+<li>auto-erotism : 0.0</li>
+<li>masturbate : 0.0</li>
+<li>ecbolic : 0.0</li>
+<li>bd : 0.0</li>
+<li>breuer : 0.0</li>
+<li>_british : 0.0</li>
+<li>menstruating : 0.0</li>
+<li>neurasthenia : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  69.12
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_58').css('display', $('#0_58').css('display') === 'block' ? 'none' : 'block')">
+                          【War and Peace】：graf Leo Tolstoy (7664)
+                      </span>
+                   <div onclick="$('#0_58').css('display','none')" style="display: none" id="0_58">
+                   <ol>
+<li>lauriston : 65.16</li>
+<li>bogucharovo : 0.0</li>
+<li>denisov : 0.0</li>
+<li>dolokhov : 0.0</li>
+<li>petya : 0.0</li>
+<li>vasili : 0.0</li>
+<li>anatole : 0.0</li>
+<li>bolkonski : 0.0</li>
+<li>rostov : 0.0</li>
+<li>alpatych : 0.0</li>
+<li>mikhaylovna : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  65.16
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_59').css('display', $('#0_59').css('display') === 'block' ? 'none' : 'block')">
+                          【A Doll&#39;s House : a play】：Henrik Ibsen (5141)
+                      </span>
+                   <div onclick="$('#0_59').css('display','none')" style="display: none" id="0_59">
+                   <ol>
+<li>jilt : 42.91</li>
+<li>someday : 22.01</li>
+<li>well-bound : 0.0</li>
+<li>torvald : 0.0</li>
+<li>tarantella : 0.0</li>
+<li>ivar : 0.0</li>
+<li>fancy-dress : 0.0</li>
+<li>helmers : 0.0</li>
+<li>singing-bird : 0.0</li>
+<li>doll-child : 0.0</li>
+<li>emmy : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  64.93
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_60').css('display', $('#0_60').css('display') === 'block' ? 'none' : 'block')">
+                          【The Yellow Wallpaper】：Charlotte Perkins Gilman (6712)
+                      </span>
+                   <div onclick="$('#0_60').css('display','none')" style="display: none" id="0_60">
+                   <ol>
+<li>back-somersault : 42.91</li>
+<li>buttercup : 19.99</li>
+<li>tremens : 0.0</li>
+<li>playroom : 0.0</li>
+<li>gilman : 0.0</li>
+<li>strangles : 0.0</li>
+<li>well-hidden : 0.0</li>
+<li>sticketh : 0.0</li>
+<li>nellie : 0.0</li>
+<li>sub-pattern : 0.0</li>
+<li>crosslights : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  62.90
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_61').css('display', $('#0_61').css('display') === 'block' ? 'none' : 'block')">
+                          【Siddhartha】：Hermann Hesse (6064)
+                      </span>
+                   <div onclick="$('#0_61').css('display','none')" style="display: none" id="0_61">
+                   <ol>
+<li>wiggling : 34.39</li>
+<li>riverbank : 22.19</li>
+<li>anathapindika : 0.0</li>
+<li>vasudeva : 0.0</li>
+<li>samana : 0.0</li>
+<li>gotama : 0.0</li>
+<li>samanas : 0.0</li>
+<li>kamaswami : 0.0</li>
+<li>om : 0.0</li>
+<li>atman : 0.0</li>
+<li>sansara : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  56.59
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_62').css('display', $('#0_62').css('display') === 'block' ? 'none' : 'block')">
+                          【The Brothers Karamazov】：Fyodor Dostoyevsky (5084)
+                      </span>
+                   <div onclick="$('#0_62').css('display','none')" style="display: none" id="0_62">
+                   <ol>
+<li>toffee : 51.90</li>
+<li>pavlovitch’s : 0.0</li>
+<li>fyodorovitch : 0.0</li>
+<li>grushenka : 0.0</li>
+<li>rakitin : 0.0</li>
+<li>grigory : 0.0</li>
+<li>karamazov : 0.0</li>
+<li>ilusha : 0.0</li>
+<li>“that’s : 0.0</li>
+<li>mitya’s : 0.0</li>
+<li>parfenovitch : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  51.90
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_63').css('display', $('#0_63').css('display') === 'block' ? 'none' : 'block')">
+                          【The Iliad】：Homer (4736)
+                      </span>
+                   <div onclick="$('#0_63').css('display','none')" style="display: none" id="0_63">
+                   <ol>
+<li>ancles : 48.51</li>
+<li>chrysa : 0.0</li>
+<li>merion : 0.0</li>
+<li>xanthus : 0.0</li>
+<li>pylian : 0.0</li>
+<li>asius : 0.0</li>
+<li>briseis : 0.0</li>
+<li>sq : 0.0</li>
+<li>saturnia : 0.0</li>
+<li>sqq : 0.0</li>
+<li>melesigenes : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  48.51
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_64').css('display', $('#0_64').css('display') === 'block' ? 'none' : 'block')">
+                          【Gulliver&#39;s Travels】：Jonathan Swift (8173)
+                      </span>
+                   <div onclick="$('#0_64').css('display','none')" style="display: none" id="0_64">
+                   <ol>
+<li>communicativeness : 42.91</li>
+<li>reldresal : 0.0</li>
+<li>_yahoo_ : 0.0</li>
+<li>majesty’s : 0.0</li>
+<li>glumdalclitch : 0.0</li>
+<li>blefuscu : 0.0</li>
+<li>luggnagg : 0.0</li>
+<li>_houyhnhnm_ : 0.0</li>
+<li>_struldbrugs_ : 0.0</li>
+<li>man-mountain : 0.0</li>
+<li>balnibarbi : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  42.91
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_65').css('display', $('#0_65').css('display') === 'block' ? 'none' : 'block')">
+                          【Don Juan】：Baron George Gordon Byron Byron (4602)
+                      </span>
+                   <div onclick="$('#0_65').css('display','none')" style="display: none" id="0_65">
+                   <ol>
+<li>olive-branch : 40.65</li>
+<li>seraskier : 0.0</li>
+<li>juanna : 0.0</li>
+<li>suwarrow : 0.0</li>
+<li>lambro : 0.0</li>
+<li>pedrillo : 0.0</li>
+<li>lolah : 0.0</li>
+<li>cossacques : 0.0</li>
+<li>amundeville : 0.0</li>
+<li>occurr : 0.0</li>
+<li>fitz-fulke : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  40.65
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_66').css('display', $('#0_66').css('display') === 'block' ? 'none' : 'block')">
+                          【The Kama Sutra of Vatsyayana】：Vatsyayana (16311)
+                      </span>
+                   <div onclick="$('#0_66').css('display','none')" style="display: none" id="0_66">
+                   <ol>
+<li>flamingo : 30.66</li>
+<li>runga : 0.0</li>
+<li>babhravya : 0.0</li>
+<li>sutra : 0.0</li>
+<li>shastra : 0.0</li>
+<li>vatsya : 0.0</li>
+<li>auparishtaka : 0.0</li>
+<li>ghee : 0.0</li>
+<li>jaghana : 0.0</li>
+<li>gonikaputra : 0.0</li>
+<li>nayika : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  30.66
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_67').css('display', $('#0_67').css('display') === 'block' ? 'none' : 'block')">
+                          【The Republic】：Plato (8252)
+                      </span>
+                   <div onclick="$('#0_67').css('display','none')" style="display: none" id="0_67">
+                   <ol>
+<li>enchant : 28.26</li>
+<li>rhapsodists : 0.0</li>
+<li>cephalus : 0.0</li>
+<li>oligarchical : 0.0</li>
+<li>timocracy : 0.0</li>
+<li>not-being : 0.0</li>
+<li>democratical : 0.0</li>
+<li>philebus : 0.0</li>
+<li>dialectical : 0.0</li>
+<li>ardiaeus : 0.0</li>
+<li>hephaestus : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  28.26
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_68').css('display', $('#0_68').css('display') === 'block' ? 'none' : 'block')">
+                          【The Notebooks of Leonardo Da Vinci — Complete】：Leonardo da Vinci (5577)
+                      </span>
+                   <div onclick="$('#0_68').css('display','none')" style="display: none" id="0_68">
+                   <ol>
+<li>braccia : 0.0</li>
+<li>b_ : 0.0</li>
+<li>_c : 0.0</li>
+<li>n_ : 0.0</li>
+<li>_d : 0.0</li>
+<li>f_ : 0.0</li>
+<li>_n : 0.0</li>
+<li>_m : 0.0</li>
+<li>soldi : 0.0</li>
+<li>vasari : 0.0</li>
+<li>_f : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_69').css('display', $('#0_69').css('display') === 'block' ? 'none' : 'block')">
+                          【The Ideal Bartender】：Tom Bullock (4697)
+                      </span>
+                   <div onclick="$('#0_69').css('display','none')" style="display: none" id="0_69">
+                   <ol>
+<li>bartender*** : 0.0</li>
+<li>ferreri : 0.0</li>
+<li>jimbo : 0.0</li>
+<li>dedicator : 0.0</li>
+<li>certifier : 0.0</li>
+<li>subfolder : 0.0</li>
+<li>kirsten : 0.0</li>
+<li>ogg : 0.0</li>
+<li>burgoyne : 0.0</li>
+<li>audio : 0.0</li>
+<li>mp3 : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_70').css('display', $('#0_70').css('display') === 'block' ? 'none' : 'block')">
+                          【The Divine Comedy】：Dante, Illustrated, Hell, Complete】：Dante Alighieri (8111)
+                      </span>
+                   <div onclick="$('#0_70').css('display','none')" style="display: none" id="0_70">
+                   <ol>
+<li>immers : 0.0</li>
+<li>barbariccia : 0.0</li>
+<li>malebolge : 0.0</li>
+<li>latian : 0.0</li>
+<li>exclaim'd : 0.0</li>
+<li>transpierc : 0.0</li>
+<li>benacus : 0.0</li>
+<li>phlegyas : 0.0</li>
+<li>sep'rate : 0.0</li>
+<li>mis'ry : 0.0</li>
+<li>cheek-bone : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_71').css('display', $('#0_71').css('display') === 'block' ? 'none' : 'block')">
+                          【The Story of a Stuffed Elephant】：Laura Lee Hope (4690)
+                      </span>
+                   <div onclick="$('#0_71').css('display','none')" style="display: none" id="0_71">
+                   <ol>
+<li>elephant*** : 0.0</li>
+<li>dedicator : 0.0</li>
+<li>subfolder : 0.0</li>
+<li>certifier : 0.0</li>
+<li>ogg : 0.0</li>
+<li>audio : 0.0</li>
+<li>mp3 : 0.0</li>
+<li>spx : 0.0</li>
+<li>mono : 0.0</li>
+<li>aac : 0.0</li>
+<li>dedicators : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_72').css('display', $('#0_72').css('display') === 'block' ? 'none' : 'block')">
+                          【Essays of Michel de Montaigne — Complete】：Michel de Montaigne (4785)
+                      </span>
+                   <div onclick="$('#0_72').css('display','none')" style="display: none" id="0_72">
+                   <ol>
+<li>quaes : 0.0</li>
+<li>boetie : 0.0</li>
+<li>neque : 0.0</li>
+<li>sibi : 0.0</li>
+<li>contexture : 0.0</li>
+<li>tamen : 0.0</li>
+<li>saepe : 0.0</li>
+<li>quoque : 0.0</li>
+<li>propertius : 0.0</li>
+<li>cleanthes : 0.0</li>
+<li>qu脱 : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_73').css('display', $('#0_73').css('display') === 'block' ? 'none' : 'block')">
+                          【Steam, Its Generation and Use】：Babcock &amp;amp; Wilcox Company (9849)
+                      </span>
+                   <div onclick="$('#0_73').css('display','none')" style="display: none" id="0_73">
+                   <ol>
+<li>babcock : 0.0</li>
+<li>|| : 0.0</li>
+<li>calorimeter : 0.0</li>
+<li>bagasse : 0.0</li>
+<li>water-tube : 0.0</li>
+<li>|______|_______|_______|_______|_______|_______|_______|_______| : 0.0</li>
+<li>calorific : 0.0</li>
+<li>superheat : 0.0</li>
+<li>|________|_________|_______|_______|_______|_______|_______|_______| : 0.0</li>
+<li>t| : 0.0</li>
+<li>co_ : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_74').css('display', $('#0_74').css('display') === 'block' ? 'none' : 'block')">
+                          【The Bible, Old and New Testaments, King James Version (7425)
+                      </span>
+                   <div onclick="$('#0_74').css('display','none')" style="display: none" id="0_74">
+                   <ol>
+<li>manasseh : 0.0</li>
+<li>joab : 0.0</li>
+<li>jehoshaphat : 0.0</li>
+<li>eleazar : 0.0</li>
+<li>amorites : 0.0</li>
+<li>1:2 : 0.0</li>
+<li>1:4 : 0.0</li>
+<li>1:1 : 0.0</li>
+<li>1:5 : 0.0</li>
+<li>1:6 : 0.0</li>
+<li>1:3 : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_75').css('display', $('#0_75').css('display') === 'block' ? 'none' : 'block')">
+                          【English Literature】：William J.  Long (11253)
+                      </span>
+                   <div onclick="$('#0_75').css('display','none')" style="display: none" id="0_75">
+                   <ol>
+<li>jonson : 0.0</li>
+<li>=e : 0.0</li>
+<li>=o : 0.0</li>
+<li>gawain : 0.0</li>
+<li>c脱dmon : 0.0</li>
+<li>saintsbury : 0.0</li>
+<li>_beowulf_ : 0.0</li>
+<li>macmillan : 0.0</li>
+<li>wyclif : 0.0</li>
+<li>cynewulf : 0.0</li>
+<li>bront谷 : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_76').css('display', $('#0_76').css('display') === 'block' ? 'none' : 'block')">
+                          【2 B R 0 2 B】：Kurt Vonnegut (4303)
+                      </span>
+                   <div onclick="$('#0_76').css('display','none')" style="display: none" id="0_76">
+                   <ol>
+<li>wehling : 0.0</li>
+<li>leora : 0.0</li>
+<li>catbox : 0.0</li>
+<li>hooligan : 0.0</li>
+<li>vonnegut : 0.0</li>
+<li>kurt : 0.0</li>
+<li>stepladder : 0.0</li>
+<li>dropcloths : 0.0</li>
+<li>faceless : 0.0</li>
+<li>gestured : 0.0</li>
+<li>hitz : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_77').css('display', $('#0_77').css('display') === 'block' ? 'none' : 'block')">
+                          【Metamorphosis】：Franz Kafka (12411)
+                      </span>
+                   <div onclick="$('#0_77').css('display','none')" style="display: none" id="0_77">
+                   <ol>
+<li>samsa : 0.0</li>
+<li>gregor's : 0.0</li>
+<li>wyllie : 0.0</li>
+<li>overview : 0.0</li>
+<li>fretsaw : 0.0</li>
+<li>dung-beetle : 0.0</li>
+<li>kafka : 0.0</li>
+<li>swang : 0.0</li>
+<li>gregor : 0.0</li>
+<li>no-one : 0.0</li>
+<li>alright : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_78').css('display', $('#0_78').css('display') === 'block' ? 'none' : 'block')">
+                          【Encyclopedia of Needlework】：Thérèse de Dillmont (7287)
+                      </span>
+                   <div onclick="$('#0_78').css('display','none')" style="display: none" id="0_78">
+                   <ol>
+<li>d.m.c : 0.0</li>
+<li>picot : 0.0</li>
+<li>cordonnet : 0.0</li>
+<li>dentelle : 0.0</li>
+<li>tricoter : 0.0</li>
+<li>broder : 0.0</li>
+<li>repriser : 0.0</li>
+<li>辿cru : 0.0</li>
+<li>d'alsace : 0.0</li>
+<li>bleu-indigo : 0.0</li>
+<li>c/m : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_79').css('display', $('#0_79').css('display') === 'block' ? 'none' : 'block')">
+                          【The Adventures of Sherlock Holmes】：Arthur Conan Doyle (6816)
+                      </span>
+                   <div onclick="$('#0_79').css('display','none')" style="display: none" id="0_79">
+                   <ol>
+<li>16-bit : 0.0</li>
+<li>32-bit : 0.0</li>
+<li>2003 : 0.0</li>
+<li>mp3 : 0.0</li>
+<li>audio : 0.0</li>
+<li>mike : 0.0</li>
+<li>sherlock : 0.0</li>
+<li>doyle : 0.0</li>
+<li>conan : 0.0</li>
+<li>holmes : 0.0</li>
+<li>copyright : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_80').css('display', $('#0_80').css('display') === 'block' ? 'none' : 'block')">
+                          【The Art of War】：Sunzi  (13000)
+                      </span>
+                   <div onclick="$('#0_80').css('display','none')" style="display: none" id="0_80">
+                   <ol>
+<li>hemmed-in : 0.0</li>
+<li>dispersive : 0.0</li>
+<li>shuai-jan : 0.0</li>
+<li>yueh : 0.0</li>
+<li>cooking-pots : 0.0</li>
+<li>tzu : 0.0</li>
+<li>tactical : 0.0</li>
+<li>maneuvering : 0.0</li>
+<li>postulate : 0.0</li>
+<li>hearkens : 0.0</li>
+<li>terrain : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_81').css('display', $('#0_81').css('display') === 'block' ? 'none' : 'block')">
+                          【Les Misérables】：Victor Hugo (19228)
+                      </span>
+                   <div onclick="$('#0_81').css('display','none')" style="display: none" id="0_81">
+                   <ol>
+<li>valjean : 0.0</li>
+<li>cosette : 0.0</li>
+<li>thenardier : 0.0</li>
+<li>javert : 0.0</li>
+<li>gavroche : 0.0</li>
+<li>fauchelevent : 0.0</li>
+<li>enjolras : 0.0</li>
+<li>gillenormand : 0.0</li>
+<li>fantine : 0.0</li>
+<li>courfeyrac : 0.0</li>
+<li>jondrette : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_82').css('display', $('#0_82').css('display') === 'block' ? 'none' : 'block')">
+                          【How to Live on 24 Hours a Day】：Arnold Bennett (4062)
+                      </span>
+                   <div onclick="$('#0_82').css('display','none')" style="display: none" id="0_82">
+                   <ol>
+<li>hp : 0.0</li>
+<li>over-cooked : 0.0</li>
+<li>time-expenditure : 0.0</li>
+<li>boat-sailing : 0.0</li>
+<li>street-cries : 0.0</li>
+<li>hazlitt : 0.0</li>
+<li>epictetus : 0.0</li>
+<li>spirit-lamp : 0.0</li>
+<li>banal : 0.0</li>
+<li>pottering : 0.0</li>
+<li>larking : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_83').css('display', $('#0_83').css('display') === 'block' ? 'none' : 'block')">
+                          【The Survey of Cornwall】：Richard Carew (13596)
+                      </span>
+                   <div onclick="$('#0_83').css('display','none')" style="display: none" id="0_83">
+                   <ol>
+<li>haue : 0.0</li>
+<li>vpon : 0.0</li>
+<li>feod : 0.0</li>
+<li>vp : 0.0</li>
+<li>iohn : 0.0</li>
+<li>onely : 0.0</li>
+<li>betweene : 0.0</li>
+<li>themselues : 0.0</li>
+<li>diuers : 0.0</li>
+<li>certaine : 0.0</li>
+<li>ouer : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_84').css('display', $('#0_84').css('display') === 'block' ? 'none' : 'block')">
+                          【The Divine Comedy】：Dante, Illustrated, Paradise, Complete】：Dante Alighieri (6743)
+                      </span>
+                   <div onclick="$('#0_84').css('display','none')" style="display: none" id="0_84">
+                   <ol>
+<li>resplendence : 0.0</li>
+<li>wond'rous : 0.0</li>
+<li>lookst : 0.0</li>
+<li>beheldst : 0.0</li>
+<li>piccarda : 0.0</li>
+<li>wax'd : 0.0</li>
+<li>erelong : 0.0</li>
+<li>conjoining : 0.0</li>
+<li>behoov : 0.0</li>
+<li>veil'd : 0.0</li>
+<li>vouchsaf'd : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_85').css('display', $('#0_85').css('display') === 'block' ? 'none' : 'block')">
+                          【Ulysses】：James Joyce (15148)
+                      </span>
+                   <div onclick="$('#0_85').css('display','none')" style="display: none" id="0_85">
+                   <ol>
+<li>dedalus : 0.0</li>
+<li>dignam : 0.0</li>
+<li>conmee : 0.0</li>
+<li>boylan : 0.0</li>
+<li>cissy : 0.0</li>
+<li>gerty : 0.0</li>
+<li>dollard : 0.0</li>
+<li>o'molloy : 0.0</li>
+<li>corny : 0.0</li>
+<li>caffrey : 0.0</li>
+<li>kelleher : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_86').css('display', $('#0_86').css('display') === 'block' ? 'none' : 'block')">
+                          【The Complete Works of William Shakespeare】：William Shakespeare (5360)
+                      </span>
+                   <div onclick="$('#0_86').css('display','none')" style="display: none" id="0_86">
+                   <ol>
+<li>dromio : 0.0</li>
+<li>inc : 0.0</li>
+<li>download : 0.0</li>
+<li>1990-1993 : 0.0</li>
+<li>antipholus : 0.0</li>
+<li>petruchio : 0.0</li>
+<li>berowne : 0.0</li>
+<li>bardolph : 0.0</li>
+<li>claudio : 0.0</li>
+<li>olivia : 0.0</li>
+<li>enobarbus : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#0_87').css('display', $('#0_87').css('display') === 'block' ? 'none' : 'block')">
+                          【Heart of Darkness】：Joseph Conrad (5683)
+                      </span>
+                   <div onclick="$('#0_87').css('display','none')" style="display: none" id="0_87">
+                   <ol>
+<li>kurtz : 0.0</li>
+<li>towson : 0.0</li>
+<li>kurtz's : 0.0</li>
+<li>fresleven : 0.0</li>
+<li>martini-henry : 0.0</li>
+<li>tin-pot : 0.0</li>
+<li>assistant-manager : 0.0</li>
+<li>half-speed : 0.0</li>
+<li>steam-pipes : 0.0</li>
+<li>smash-up : 0.0</li>
+<li>tenebrous : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+</tbody></table>
+</div>
+<div class="table-container-content-width">
+<table>
+<colgroup><col class="term"><col class="weight"></colgroup>
+<thead>
+<tr><th colspan="2">00_BM25nomalIDF_user2.tsv</th></tr>
+<tr><th>-</th></tr>
+<tr><th>XXX</th><th>Weight</th></tr>
+</thead>
+<tbody>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_0').css('display', $('#1_0').css('display') === 'block' ? 'none' : 'block')">
+                          【Three Men in a Boat】：Jerome K.  Jerome (7618)
+                      </span>
+                   <div onclick="$('#1_0').css('display','none')" style="display: none" id="1_0">
+                   <ol>
+<li>shepperton : 64.45</li>
+<li>weybridge : 55.18</li>
+<li>halliford : 53.99</li>
+<li>sunbury : 53.50</li>
+<li>south-western : 51.90</li>
+<li>north-western : 48.51</li>
+<li>_referee_ : 48.51</li>
+<li>chertsey : 43.98</li>
+<li>medmenham : 0.0</li>
+<li>paraffine : 0.0</li>
+<li>bisham : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  420.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_1').css('display', $('#1_1').css('display') === 'block' ? 'none' : 'block')">
+                          【The Adventures of Sherlock Holmes】：Arthur Conan Doyle (41079)
+                      </span>
+                   <div onclick="$('#1_1').css('display','none')" style="display: none" id="1_1">
+                   <ol>
+<li>leatherhead : 66.47</li>
+<li>kilburn : 61.33</li>
+<li>far-gone : 48.51</li>
+<li>streatham : 0.0</li>
+<li>neville : 0.0</li>
+<li>hatherley : 0.0</li>
+<li>boscombe : 0.0</li>
+<li>toller : 0.0</li>
+<li>openshaw : 0.0</li>
+<li>merryweather : 0.0</li>
+<li>briony : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  176.3
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_2').css('display', $('#1_2').css('display') === 'block' ? 'none' : 'block')">
+                          【This Side of Paradise】：F. Scott  Fitzgerald (4069)
+                      </span>
+                   <div onclick="$('#1_2').css('display','none')" style="display: none" id="1_2">
+                   <ol>
+<li>aviation : 58.67</li>
+<li>world-old : 48.51</li>
+<li>age-old : 41.59</li>
+<li>marylyn : 0.0</li>
+<li>blaine : 0.0</li>
+<li>princetonian : 0.0</li>
+<li>slicker : 0.0</li>
+<li>ferrenby : 0.0</li>
+<li>olson : 0.0</li>
+<li>humbird : 0.0</li>
+<li>d'invilliers : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  148.7
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_3').css('display', $('#1_3').css('display') === 'block' ? 'none' : 'block')">
+                          【The Romance of Lust】：Anonymous (5331)
+                      </span>
+                   <div onclick="$('#1_3').css('display','none')" style="display: none" id="1_3">
+                   <ol>
+<li>moss-like : 57.33</li>
+<li>mountainside : 48.51</li>
+<li>peephole : 42.58</li>
+<li>bubby : 0.0</li>
+<li>frigged : 0.0</li>
+<li>salacious : 0.0</li>
+<li>arsehole : 0.0</li>
+<li>maccallum : 0.0</li>
+<li>gamahuching : 0.0</li>
+<li>quim : 0.0</li>
+<li>bubbies : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  148.4
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_4').css('display', $('#1_4').css('display') === 'block' ? 'none' : 'block')">
+                          【A Connecticut Yankee in King Arthur&#39;s Court】：Mark Twain (5185)
+                      </span>
+                   <div onclick="$('#1_4').css('display','none')" style="display: none" id="1_4">
+                   <ol>
+<li>clean-minded : 48.51</li>
+<li>muscled : 48.51</li>
+<li>ironclad : 42.18</li>
+<li>madok : 0.0</li>
+<li>gareth : 0.0</li>
+<li>milrays : 0.0</li>
+<li>uwaine : 0.0</li>
+<li>alisande : 0.0</li>
+<li>dinadan : 0.0</li>
+<li>hello-central : 0.0</li>
+<li>king's-evil : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  139.2
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_5').css('display', $('#1_5').css('display') === 'block' ? 'none' : 'block')">
+                          【War and Peace】：graf Leo Tolstoy (7664)
+                      </span>
+                   <div onclick="$('#1_5').css('display','none')" style="display: none" id="1_5">
+                   <ol>
+<li>looting : 65.68</li>
+<li>major-domo : 61.53</li>
+<li>bogucharovo : 0.0</li>
+<li>dolokhov : 0.0</li>
+<li>petya : 0.0</li>
+<li>vasili : 0.0</li>
+<li>anatole : 0.0</li>
+<li>bolkonski : 0.0</li>
+<li>rostov : 0.0</li>
+<li>alpatych : 0.0</li>
+<li>mikhaylovna : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  127.2
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_6').css('display', $('#1_6').css('display') === 'block' ? 'none' : 'block')">
+                          【The Memoirs of Sherlock Holmes】：Arthur Conan Doyle (5172)
+                      </span>
+                   <div onclick="$('#1_6').css('display','none')" style="display: none" id="1_6">
+                   <ol>
+<li>woking : 70.61</li>
+<li>ripley : 53.77</li>
+<li>gorot : 0.0</li>
+<li>trevor : 0.0</li>
+<li>mawson : 0.0</li>
+<li>holdhurst : 0.0</li>
+<li>commissionnaire : 0.0</li>
+<li>mapleton : 0.0</li>
+<li>pyland : 0.0</li>
+<li>forbes : 0.0</li>
+<li>hurlstone : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  124.3
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_7').css('display', $('#1_7').css('display') === 'block' ? 'none' : 'block')">
+                          【Complete Original Short Stories of Guy De Maupassant】：Guy de Maupassant (4969)
+                      </span>
+                   <div onclick="$('#1_7').css('display','none')" style="display: none" id="1_7">
+                   <ol>
+<li>henderson : 69.50</li>
+<li>blue-green : 48.51</li>
+<li>cimme : 0.0</li>
+<li>suif : 0.0</li>
+<li>cesaire : 0.0</li>
+<li>maupassant : 0.0</li>
+<li>tellier : 0.0</li>
+<li>toine : 0.0</li>
+<li>saval : 0.0</li>
+<li>marambot : 0.0</li>
+<li>boivin : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  118.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_8').css('display', $('#1_8').css('display') === 'block' ? 'none' : 'block')">
+                          【The Story of My Life】：Helen Keller (4877)
+                      </span>
+                   <div onclick="$('#1_8').css('display','none')" style="display: none" id="1_8">
+                   <ol>
+<li>burroughs : 59.94</li>
+<li>cowled : 48.51</li>
+<li>brattle : 0.0</li>
+<li>canby : 0.0</li>
+<li>bridgman : 0.0</li>
+<li>viney : 0.0</li>
+<li>deaf-blind : 0.0</li>
+<li>hulton : 0.0</li>
+<li>wright-humason : 0.0</li>
+<li>huntsville : 0.0</li>
+<li>keller's : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  108.4
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_9').css('display', $('#1_9').css('display') === 'block' ? 'none' : 'block')">
+                          【Frankenstein】：Mary Wollstonecraft Shelley (9150)
+                      </span>
+                   <div onclick="$('#1_9').css('display','none')" style="display: none" id="1_9">
+                   <ol>
+<li>woolwich : 50.72</li>
+<li>southwesterly : 48.51</li>
+<li>petersburgh : 0.0</li>
+<li>safie : 0.0</li>
+<li>ingolstadt : 0.0</li>
+<li>kirwin : 0.0</li>
+<li>waldman : 0.0</li>
+<li>krempe : 0.0</li>
+<li>lacey : 0.0</li>
+<li>chamounix : 0.0</li>
+<li>belrive : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  99.23
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_10').css('display', $('#1_10').css('display') === 'block' ? 'none' : 'block')">
+                          【How to Analyze People on Sight】：Elsie Lincoln Benedict and Ralph Paine Benedict (15698)
+                      </span>
+                   <div onclick="$('#1_10').css('display','none')" style="display: none" id="1_10">
+                   <ol>
+<li>radium : 53.99</li>
+<li>age-old : 41.59</li>
+<li>over-developed : 0.0</li>
+<li>alimentives : 0.0</li>
+<li>pugnacity : 0.0</li>
+<li>cerebrals : 0.0</li>
+<li>merchandizing : 0.0</li>
+<li>_remember : 0.0</li>
+<li>large-headed : 0.0</li>
+<li>salesmanship : 0.0</li>
+<li>capitalizes : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  95.59
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_11').css('display', $('#1_11').css('display') === 'block' ? 'none' : 'block')">
+                          【The Time Machine】：H. G.  Wells (4238)
+                      </span>
+                   <div onclick="$('#1_11').css('display','none')" style="display: none" id="1_11">
+                   <ol>
+<li>wimbledon : 53.77</li>
+<li>bacteria : 41.59</li>
+<li>aluminium : 0.0</li>
+<li>upper-worlders : 0.0</li>
+<li>morlock : 0.0</li>
+<li>crematorium : 0.0</li>
+<li>watchett : 0.0</li>
+<li>time-dimension : 0.0</li>
+<li>ventilating : 0.0</li>
+<li>over-world : 0.0</li>
+<li>three-dimensional : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  95.37
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_12').css('display', $('#1_12').css('display') === 'block' ? 'none' : 'block')">
+                          【Walden】：Henry David Thoreau (5523)
+                      </span>
+                   <div onclick="$('#1_12').css('display','none')" style="display: none" id="1_12">
+                   <ol>
+<li>silicious : 48.51</li>
+<li>frond : 42.88</li>
+<li>fyne : 0.0</li>
+<li>bean-field : 0.0</li>
+<li>hoed : 0.0</li>
+<li>johnswort : 0.0</li>
+<li>woodchoppers : 0.0</li>
+<li>snow-crust : 0.0</li>
+<li>fitchburg : 0.0</li>
+<li>hounding : 0.0</li>
+<li>sudbury : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  91.39
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_13').css('display', $('#1_13').css('display') === 'block' ? 'none' : 'block')">
+                          【The Works of Edgar Allan Poe — Volume 2】：Edgar Allan Poe (3945)
+                      </span>
+                   <div onclick="$('#1_13').css('display','none')" style="display: none" id="1_13">
+                   <ol>
+<li>spectrum : 48.51</li>
+<li>mors : 37.11</li>
+<li>phantasmagoric : 0.0</li>
+<li>kempelen : 0.0</li>
+<li>eleonora : 0.0</li>
+<li>unparticled : 0.0</li>
+<li>fortunato : 0.0</li>
+<li>lofoden : 0.0</li>
+<li>moskoe : 0.0</li>
+<li>moskoe-str旦m : 0.0</li>
+<li>arnheim : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  85.63
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_14').css('display', $('#1_14').css('display') === 'block' ? 'none' : 'block')">
+                          【David Copperfield】：Charles Dickens (4324)
+                      </span>
+                   <div onclick="$('#1_14').css('display','none')" style="display: none" id="1_14">
+                   <ol>
+<li>putney : 68.83</li>
+<li>masr : 0.0</li>
+<li>steerforth : 0.0</li>
+<li>murdstone : 0.0</li>
+<li>wickfield : 0.0</li>
+<li>em'ly : 0.0</li>
+<li>barkis : 0.0</li>
+<li>trotwood : 0.0</li>
+<li>spenlow : 0.0</li>
+<li>creakle : 0.0</li>
+<li>gummidge : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  68.83
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_15').css('display', $('#1_15').css('display') === 'block' ? 'none' : 'block')">
+                          【The Art of War】：Sunzi  (13000)
+                      </span>
+                   <div onclick="$('#1_15').css('display','none')" style="display: none" id="1_15">
+                   <ol>
+<li>maneuvering : 59.50</li>
+<li>chu : 0.0</li>
+<li>shuai-jan : 0.0</li>
+<li>yueh : 0.0</li>
+<li>cooking-pots : 0.0</li>
+<li>tzu : 0.0</li>
+<li>tactical : 0.0</li>
+<li>hemmed-in : 0.0</li>
+<li>postulate : 0.0</li>
+<li>hearkens : 0.0</li>
+<li>terrain : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  59.50
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_16').css('display', $('#1_16').css('display') === 'block' ? 'none' : 'block')">
+                          【A Study in Scarlet】：Arthur Conan Doyle (6126)
+                      </span>
+                   <div onclick="$('#1_16').css('display','none')" style="display: none" id="1_16">
+                   <ol>
+<li>_daily : 59.50</li>
+<li>kemball : 0.0</li>
+<li>charpentier : 0.0</li>
+<li>rance : 0.0</li>
+<li>rache : 0.0</li>
+<li>wiggins : 0.0</li>
+<li>trichinopoly : 0.0</li>
+<li>murcher : 0.0</li>
+<li>alkaloid : 0.0</li>
+<li>houndsditch : 0.0</li>
+<li>mustang : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  59.50
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_17').css('display', $('#1_17').css('display') === 'block' ? 'none' : 'block')">
+                          【Leaves of Grass】：Walt Whitman (18743)
+                      </span>
+                   <div onclick="$('#1_17').css('display','none')" style="display: none" id="1_17">
+                   <ol>
+<li>propels : 57.33</li>
+<li>convuls : 0.0</li>
+<li>libertad : 0.0</li>
+<li>mannahatta : 0.0</li>
+<li>may-be : 0.0</li>
+<li>brooklyn : 0.0</li>
+<li>en-masse : 0.0</li>
+<li>kanada : 0.0</li>
+<li>tallying : 0.0</li>
+<li>orbic : 0.0</li>
+<li>kanadian : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  57.33
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_18').css('display', $('#1_18').css('display') === 'block' ? 'none' : 'block')">
+                          【Heart of Darkness】：Joseph Conrad (5683)
+                      </span>
+                   <div onclick="$('#1_18').css('display','none')" style="display: none" id="1_18">
+                   <ol>
+<li>lugging : 54.84</li>
+<li>pilot-house : 0.0</li>
+<li>kurtz's : 0.0</li>
+<li>fresleven : 0.0</li>
+<li>martini-henry : 0.0</li>
+<li>tin-pot : 0.0</li>
+<li>assistant-manager : 0.0</li>
+<li>half-speed : 0.0</li>
+<li>steam-pipes : 0.0</li>
+<li>smash-up : 0.0</li>
+<li>tenebrous : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  54.84
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_19').css('display', $('#1_19').css('display') === 'block' ? 'none' : 'block')">
+                          【Beowulf (14142)
+                      </span>
+                   <div onclick="$('#1_19').css('display','none')" style="display: none" id="1_19">
+                   <ol>
+<li>erstwhile : 52.33</li>
+<li>eofor : 0.0</li>
+<li>geatmen : 0.0</li>
+<li>h-so : 0.0</li>
+<li>earlmen : 0.0</li>
+<li>liegelord : 0.0</li>
+<li>danemen : 0.0</li>
+<li>unferth : 0.0</li>
+<li>ongentheow : 0.0</li>
+<li>healfdene : 0.0</li>
+<li>ecgtheow : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  52.33
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_20').css('display', $('#1_20').css('display') === 'block' ? 'none' : 'block')">
+                          【Great Expectations】：Charles Dickens (10443)
+                      </span>
+                   <div onclick="$('#1_20').css('display','none')" style="display: none" id="1_20">
+                   <ol>
+<li>hounslow : 50.72</li>
+<li>mithter : 0.0</li>
+<li>estella : 0.0</li>
+<li>pumblechook : 0.0</li>
+<li>wopsle : 0.0</li>
+<li>drummle : 0.0</li>
+<li>provis : 0.0</li>
+<li>orlick : 0.0</li>
+<li>compeyson : 0.0</li>
+<li>trabb : 0.0</li>
+<li>gargery : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  50.72
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_21').css('display', $('#1_21').css('display') === 'block' ? 'none' : 'block')">
+                          【Anna Karenina】：graf Leo Tolstoy (5225)
+                      </span>
+                   <div onclick="$('#1_21').css('display','none')" style="display: none" id="1_21">
+                   <ol>
+<li>full-fledged : 50.72</li>
+<li>mihailov : 0.0</li>
+<li>varenka : 0.0</li>
+<li>sviazhsky : 0.0</li>
+<li>konstantin : 0.0</li>
+<li>seryozha : 0.0</li>
+<li>lidia : 0.0</li>
+<li>veslovsky : 0.0</li>
+<li>oblonsky : 0.0</li>
+<li>levin’s : 0.0</li>
+<li>vronsky’s : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  50.72
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_22').css('display', $('#1_22').css('display') === 'block' ? 'none' : 'block')">
+                          【The Adventures of Tom Sawyer】：Mark Twain (14688)
+                      </span>
+                   <div onclick="$('#1_22').css('display','none')" style="display: none" id="1_22">
+                   <ol>
+<li>second-story : 48.51</li>
+<li>hollis : 0.0</li>
+<li>dono : 0.0</li>
+<li>hucky : 0.0</li>
+<li>spunk-water : 0.0</li>
+<li>ting-a-ling-ling : 0.0</li>
+<li>pain-killer : 0.0</li>
+<li>lookyhere : 0.0</li>
+<li>harbison : 0.0</li>
+<li>meow : 0.0</li>
+<li>maow : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  48.51
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_23').css('display', $('#1_23').css('display') === 'block' ? 'none' : 'block')">
+                          【Dracula】：Bram Stoker (9135)
+                      </span>
+                   <div onclick="$('#1_23').css('display','none')" style="display: none" id="1_23">
+                   <ol>
+<li>harwich : 48.51</li>
+<li>tate : 0.0</li>
+<li>renfield : 0.0</li>
+<li>westenra : 0.0</li>
+<li>undead : 0.0</li>
+<li>varna : 0.0</li>
+<li>carfax : 0.0</li>
+<li>galatz : 0.0</li>
+<li>holmwood : 0.0</li>
+<li>szgany : 0.0</li>
+<li>lucy's : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  48.51
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_24').css('display', $('#1_24').css('display') === 'block' ? 'none' : 'block')">
+                          【The Call of the Wild】：Jack London (5358)
+                      </span>
+                   <div onclick="$('#1_24').css('display','none')" style="display: none" id="1_24">
+                   <ol>
+<li>contraption : 48.51</li>
+<li>team-dogs : 0.0</li>
+<li>billee : 0.0</li>
+<li>yeehats : 0.0</li>
+<li>heem : 0.0</li>
+<li>matthewson : 0.0</li>
+<li>southland : 0.0</li>
+<li>nig : 0.0</li>
+<li>skeet : 0.0</li>
+<li>skaguay : 0.0</li>
+<li>saloon-keeper : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  48.51
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_25').css('display', $('#1_25').css('display') === 'block' ? 'none' : 'block')">
+                          【Treasure Island】：Robert Louis Stevenson (7144)
+                      </span>
+                   <div onclick="$('#1_25').css('display','none')" style="display: none" id="1_25">
+                   <ol>
+<li>pluckily : 48.51</li>
+<li>sea-cloth : 0.0</li>
+<li>cap'n : 0.0</li>
+<li>benbow : 0.0</li>
+<li>yo-ho-ho : 0.0</li>
+<li>round-shot : 0.0</li>
+<li>lillibullero : 0.0</li>
+<li>jine : 0.0</li>
+<li>treasure-hunt : 0.0</li>
+<li>lop-sided : 0.0</li>
+<li>itt : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  48.51
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_26').css('display', $('#1_26').css('display') === 'block' ? 'none' : 'block')">
+                          【Secret Adversary】：Agatha Christie (5452)
+                      </span>
+                   <div onclick="$('#1_26').css('display','none')" style="display: none" id="1_26">
+                   <ol>
+<li>one-man : 45.95</li>
+<li>sweeny : 0.0</li>
+<li>hersheimmer : 0.0</li>
+<li>edgerton : 0.0</li>
+<li>kramenin : 0.0</li>
+<li>danvers : 0.0</li>
+<li>lusitania : 0.0</li>
+<li>esthonia : 0.0</li>
+<li>gatehouse : 0.0</li>
+<li>tuppence's : 0.0</li>
+<li>julius's : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  45.95
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_27').css('display', $('#1_27').css('display') === 'block' ? 'none' : 'block')">
+                          【Myths and Legends of Ancient Greece and Rome】：E.M. Berens (6365)
+                      </span>
+                   <div onclick="$('#1_27').css('display','none')" style="display: none" id="1_27">
+                   <ol>
+<li>mors : 43.86</li>
+<li>thanatos : 0.0</li>
+<li>g脱a : 0.0</li>
+<li>heph脱stus : 0.0</li>
+<li>pallas-athene : 0.0</li>
+<li>pirith旦us : 0.0</li>
+<li>a谷tes : 0.0</li>
+<li>augeas : 0.0</li>
+<li>nyx : 0.0</li>
+<li>alcmene : 0.0</li>
+<li>cr谷usa : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  43.86
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_28').css('display', $('#1_28').css('display') === 'block' ? 'none' : 'block')">
+                          【Metamorphosis】：Franz Kafka (12411)
+                      </span>
+                   <div onclick="$('#1_28').css('display','none')" style="display: none" id="1_28">
+                   <ol>
+<li>nearby : 43.10</li>
+<li>serviette : 0.0</li>
+<li>wyllie : 0.0</li>
+<li>overview : 0.0</li>
+<li>fretsaw : 0.0</li>
+<li>dung-beetle : 0.0</li>
+<li>kafka : 0.0</li>
+<li>swang : 0.0</li>
+<li>gregor : 0.0</li>
+<li>no-one : 0.0</li>
+<li>alright : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  43.10
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_29').css('display', $('#1_29').css('display') === 'block' ? 'none' : 'block')">
+                          【Essays of Michel de Montaigne — Complete】：Michel de Montaigne (4785)
+                      </span>
+                   <div onclick="$('#1_29').css('display','none')" style="display: none" id="1_29">
+                   <ol>
+<li>quaes : 0.0</li>
+<li>boetie : 0.0</li>
+<li>neque : 0.0</li>
+<li>sibi : 0.0</li>
+<li>contexture : 0.0</li>
+<li>tamen : 0.0</li>
+<li>saepe : 0.0</li>
+<li>quoque : 0.0</li>
+<li>propertius : 0.0</li>
+<li>cleanthes : 0.0</li>
+<li>qu脱 : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_30').css('display', $('#1_30').css('display') === 'block' ? 'none' : 'block')">
+                          【Alice&#39;s Adventures in Wonderland】：Lewis Carroll (23011)
+                      </span>
+                   <div onclick="$('#1_30').css('display','none')" style="display: none" id="1_30">
+                   <ol>
+<li>oop : 0.0</li>
+<li>lory : 0.0</li>
+<li>soo : 0.0</li>
+<li>hookah : 0.0</li>
+<li>jury-box : 0.0</li>
+<li>ootiful : 0.0</li>
+<li>rabbit-hole : 0.0</li>
+<li>muchness : 0.0</li>
+<li>eaglet : 0.0</li>
+<li>fish-footman : 0.0</li>
+<li>dinn : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_31').css('display', $('#1_31').css('display') === 'block' ? 'none' : 'block')">
+                          【Beyond Good and Evil】：Friedrich Wilhelm Nietzsche (7787)
+                      </span>
+                   <div onclick="$('#1_31').css('display','none')" style="display: none" id="1_31">
+                   <ol>
+<li>galiani : 0.0</li>
+<li>free-spirited : 0.0</li>
+<li>moralistic : 0.0</li>
+<li>plebeianism : 0.0</li>
+<li>semi-barbarity : 0.0</li>
+<li>super-abundance : 0.0</li>
+<li>non-freedom : 0.0</li>
+<li>dangerousness : 0.0</li>
+<li>counter-arguments : 0.0</li>
+<li>atomism : 0.0</li>
+<li>sensualism : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_32').css('display', $('#1_32').css('display') === 'block' ? 'none' : 'block')">
+                          【The Count of Monte Cristo】：Alexandre Dumas (7859)
+                      </span>
+                   <div onclick="$('#1_32').css('display','none')" style="display: none" id="1_32">
+                   <ol>
+<li>cristo : 0.0</li>
+<li>villefort : 0.0</li>
+<li>danglars : 0.0</li>
+<li>caderousse : 0.0</li>
+<li>morcerf : 0.0</li>
+<li>noirtier : 0.0</li>
+<li>debray : 0.0</li>
+<li>cavalcanti : 0.0</li>
+<li>chateau-renaud : 0.0</li>
+<li>d'avrigny : 0.0</li>
+<li>saint-meran : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_33').css('display', $('#1_33').css('display') === 'block' ? 'none' : 'block')">
+                          【Emma】：Jane Austen (7547)
+                      </span>
+                   <div onclick="$('#1_33').css('display','none')" style="display: none" id="1_33">
+                   <ol>
+<li>knightley : 0.0</li>
+<li>elton : 0.0</li>
+<li>hartfield : 0.0</li>
+<li>goddard : 0.0</li>
+<li>donwell : 0.0</li>
+<li>enscombe : 0.0</li>
+<li>eltons : 0.0</li>
+<li>harriet's : 0.0</li>
+<li>smallridge : 0.0</li>
+<li>selina : 0.0</li>
+<li>court-plaister : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_34').css('display', $('#1_34').css('display') === 'block' ? 'none' : 'block')">
+                          【The Wonderful Wizard of Oz】：L. Frank  Baum (7408)
+                      </span>
+                   <div onclick="$('#1_34').css('display','none')" style="display: none" id="1_34">
+                   <ol>
+<li>winkies : 0.0</li>
+<li>munchkins : 0.0</li>
+<li>glinda : 0.0</li>
+<li>munchkin : 0.0</li>
+<li>quadlings : 0.0</li>
+<li>kalidahs : 0.0</li>
+<li>quelala : 0.0</li>
+<li>gayelette : 0.0</li>
+<li>boq : 0.0</li>
+<li>hammer-heads : 0.0</li>
+<li>zuz-zy : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_35').css('display', $('#1_35').css('display') === 'block' ? 'none' : 'block')">
+                          【The Girl Next Door】：Augusta Huiell Seaman (7980)
+                      </span>
+                   <div onclick="$('#1_35').css('display','none')" style="display: none" id="1_35">
+                   <ol>
+<li>alixe : 0.0</li>
+<li>atwater : 0.0</li>
+<li>carringford : 0.0</li>
+<li>tr辰umerei : 0.0</li>
+<li>northam : 0.0</li>
+<li>goodrich : 0.0</li>
+<li>hong-kong : 0.0</li>
+<li>bidwell : 0.0</li>
+<li>treadwell : 0.0</li>
+<li>market-basket : 0.0</li>
+<li>grocery-shop : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_36').css('display', $('#1_36').css('display') === 'block' ? 'none' : 'block')">
+                          【Dubliners】：James Joyce (6939)
+                      </span>
+                   <div onclick="$('#1_36').css('display','none')" style="display: none" id="1_36">
+                   <ol>
+<li>henchy : 0.0</li>
+<li>ivors : 0.0</li>
+<li>segouin : 0.0</li>
+<li>villona : 0.0</li>
+<li>donnelly : 0.0</li>
+<li>duffy : 0.0</li>
+<li>delacour : 0.0</li>
+<li>alphy : 0.0</li>
+<li>riviere : 0.0</li>
+<li>furey : 0.0</li>
+<li>keon : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_37').css('display', $('#1_37').css('display') === 'block' ? 'none' : 'block')">
+                          【The Adventures of Sherlock Holmes】：Arthur Conan Doyle (6816)
+                      </span>
+                   <div onclick="$('#1_37').css('display','none')" style="display: none" id="1_37">
+                   <ol>
+<li>16-bit : 0.0</li>
+<li>32-bit : 0.0</li>
+<li>2003 : 0.0</li>
+<li>mp3 : 0.0</li>
+<li>audio : 0.0</li>
+<li>mike : 0.0</li>
+<li>sherlock : 0.0</li>
+<li>doyle : 0.0</li>
+<li>conan : 0.0</li>
+<li>holmes : 0.0</li>
+<li>copyright : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_38').css('display', $('#1_38').css('display') === 'block' ? 'none' : 'block')">
+                          【The Divine Comedy】：Dante, Illustrated, Paradise, Complete】：Dante Alighieri (6743)
+                      </span>
+                   <div onclick="$('#1_38').css('display','none')" style="display: none" id="1_38">
+                   <ol>
+<li>resplendence : 0.0</li>
+<li>wond'rous : 0.0</li>
+<li>lookst : 0.0</li>
+<li>beheldst : 0.0</li>
+<li>piccarda : 0.0</li>
+<li>wax'd : 0.0</li>
+<li>erelong : 0.0</li>
+<li>conjoining : 0.0</li>
+<li>behoov : 0.0</li>
+<li>veil'd : 0.0</li>
+<li>vouchsaf'd : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_39').css('display', $('#1_39').css('display') === 'block' ? 'none' : 'block')">
+                          【The Divine Comedy】：Dante, Illustrated】：Dante Alighieri (22542)
+                      </span>
+                   <div onclick="$('#1_39').css('display','none')" style="display: none" id="1_39">
+                   <ol>
+<li>costanza : 0.0</li>
+<li>forese : 0.0</li>
+<li>rightward : 0.0</li>
+<li>sculptur : 0.0</li>
+<li>imag : 0.0</li>
+<li>michol : 0.0</li>
+<li>guittone : 0.0</li>
+<li>sev'nfold : 0.0</li>
+<li>direr : 0.0</li>
+<li>unmov'd : 0.0</li>
+<li>lav : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_40').css('display', $('#1_40').css('display') === 'block' ? 'none' : 'block')">
+                          【The Yellow Wallpaper】：Charlotte Perkins Gilman (6712)
+                      </span>
+                   <div onclick="$('#1_40').css('display','none')" style="display: none" id="1_40">
+                   <ol>
+<li>sub-pattern : 0.0</li>
+<li>smooch : 0.0</li>
+<li>jennie : 0.0</li>
+<li>playroom : 0.0</li>
+<li>gilman : 0.0</li>
+<li>strangles : 0.0</li>
+<li>well-hidden : 0.0</li>
+<li>sticketh : 0.0</li>
+<li>nellie : 0.0</li>
+<li>back-somersault : 0.0</li>
+<li>crosslights : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_41').css('display', $('#1_41').css('display') === 'block' ? 'none' : 'block')">
+                          【The Divine Comedy】：Dante, Illustrated, Hell, Complete】：Dante Alighieri (8111)
+                      </span>
+                   <div onclick="$('#1_41').css('display','none')" style="display: none" id="1_41">
+                   <ol>
+<li>immers : 0.0</li>
+<li>barbariccia : 0.0</li>
+<li>malebolge : 0.0</li>
+<li>latian : 0.0</li>
+<li>exclaim'd : 0.0</li>
+<li>transpierc : 0.0</li>
+<li>benacus : 0.0</li>
+<li>phlegyas : 0.0</li>
+<li>sep'rate : 0.0</li>
+<li>mis'ry : 0.0</li>
+<li>cheek-bone : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_42').css('display', $('#1_42').css('display') === 'block' ? 'none' : 'block')">
+                          【Gulliver&#39;s Travels】：Jonathan Swift (8173)
+                      </span>
+                   <div onclick="$('#1_42').css('display','none')" style="display: none" id="1_42">
+                   <ol>
+<li>_yahoos_ : 0.0</li>
+<li>_houyhnhnms_ : 0.0</li>
+<li>_yahoo_ : 0.0</li>
+<li>majesty’s : 0.0</li>
+<li>glumdalclitch : 0.0</li>
+<li>blefuscu : 0.0</li>
+<li>luggnagg : 0.0</li>
+<li>_houyhnhnm_ : 0.0</li>
+<li>_struldbrugs_ : 0.0</li>
+<li>man-mountain : 0.0</li>
+<li>balnibarbi : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_43').css('display', $('#1_43').css('display') === 'block' ? 'none' : 'block')">
+                          【Siddhartha】：Hermann Hesse (6064)
+                      </span>
+                   <div onclick="$('#1_43').css('display','none')" style="display: none" id="1_43">
+                   <ol>
+<li>siddhartha : 0.0</li>
+<li>govinda : 0.0</li>
+<li>kamala : 0.0</li>
+<li>vasudeva : 0.0</li>
+<li>samana : 0.0</li>
+<li>gotama : 0.0</li>
+<li>samanas : 0.0</li>
+<li>kamaswami : 0.0</li>
+<li>om : 0.0</li>
+<li>atman : 0.0</li>
+<li>sansara : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_44').css('display', $('#1_44').css('display') === 'block' ? 'none' : 'block')">
+                          【The Mysterious Affair at Styles】：Agatha Christie (6019)
+                      </span>
+                   <div onclick="$('#1_44').css('display','none')" style="display: none" id="1_44">
+                   <ol>
+<li>poirot : 0.0</li>
+<li>inglethorp : 0.0</li>
+<li>bauerstein : 0.0</li>
+<li>evie : 0.0</li>
+<li>tadminster : 0.0</li>
+<li>despatch-case : 0.0</li>
+<li>inglethorp's : 0.0</li>
+<li>raikes : 0.0</li>
+<li>summerhaye : 0.0</li>
+<li>murdoch : 0.0</li>
+<li>heavywether : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_45').css('display', $('#1_45').css('display') === 'block' ? 'none' : 'block')">
+                          【Anne of Green Gables】：L. M.  Montgomery (5722)
+                      </span>
+                   <div onclick="$('#1_45').css('display','none')" style="display: none" id="1_45">
+                   <ol>
+<li>marilla : 0.0</li>
+<li>lynde : 0.0</li>
+<li>avonlea : 0.0</li>
+<li>stacy : 0.0</li>
+<li>gillis : 0.0</li>
+<li>carmody : 0.0</li>
+<li>avery : 0.0</li>
+<li>charlottetown : 0.0</li>
+<li>gertie : 0.0</li>
+<li>anne-girl : 0.0</li>
+<li>white-lace : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_46').css('display', $('#1_46').css('display') === 'block' ? 'none' : 'block')">
+                          【A Christmas Carol】：Charles Dickens (5690)
+                      </span>
+                   <div onclick="$('#1_46').css('display','none')" style="display: none" id="1_46">
+                   <ol>
+<li>scrooge : 0.0</li>
+<li>cratchit : 0.0</li>
+<li>fezziwig : 0.0</li>
+<li>cratchits : 0.0</li>
+<li>dilber : 0.0</li>
+<li>apple-sauce : 0.0</li>
+<li>scrooge's : 0.0</li>
+<li>hilli-ho : 0.0</li>
+<li>marley : 0.0</li>
+<li>ebenezer : 0.0</li>
+<li>thank'ee : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_47').css('display', $('#1_47').css('display') === 'block' ? 'none' : 'block')">
+                          【The Republic】：Plato (8252)
+                      </span>
+                   <div onclick="$('#1_47').css('display','none')" style="display: none" id="1_47">
+                   <ol>
+<li>adeimantus : 0.0</li>
+<li>polemarchus : 0.0</li>
+<li>cephalus : 0.0</li>
+<li>oligarchical : 0.0</li>
+<li>timocracy : 0.0</li>
+<li>not-being : 0.0</li>
+<li>democratical : 0.0</li>
+<li>philebus : 0.0</li>
+<li>dialectical : 0.0</li>
+<li>ardiaeus : 0.0</li>
+<li>hephaestus : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_48').css('display', $('#1_48').css('display') === 'block' ? 'none' : 'block')">
+                          【Around the World in Eighty Days】：Jules Verne (5587)
+                      </span>
+                   <div onclick="$('#1_48').css('display','none')" style="display: none" id="1_48">
+                   <ol>
+<li>fogg : 0.0</li>
+<li>passepartout : 0.0</li>
+<li>phileas : 0.0</li>
+<li>aouda : 0.0</li>
+<li>yokohama : 0.0</li>
+<li>carnatic : 0.0</li>
+<li>tankadere : 0.0</li>
+<li>allahabad : 0.0</li>
+<li>bunsby : 0.0</li>
+<li>singapore : 0.0</li>
+<li>cromarty : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_49').css('display', $('#1_49').css('display') === 'block' ? 'none' : 'block')">
+                          【Grimms&#39; Fairy Tales】：Jacob Grimm and Wilhelm Grimm (22246)
+                      </span>
+                   <div onclick="$('#1_49').css('display','none')" style="display: none" id="1_49">
+                   <ol>
+<li>gretel : 0.0</li>
+<li>hansel : 0.0</li>
+<li>rapunzel : 0.0</li>
+<li>dummling : 0.0</li>
+<li>falada : 0.0</li>
+<li>ashputtel : 0.0</li>
+<li>heinel : 0.0</li>
+<li>cat-skin : 0.0</li>
+<li>kywitt : 0.0</li>
+<li>fundevogel : 0.0</li>
+<li>marleen : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_50').css('display', $('#1_50').css('display') === 'block' ? 'none' : 'block')">
+                          【The Notebooks of Leonardo Da Vinci — Complete】：Leonardo da Vinci (5577)
+                      </span>
+                   <div onclick="$('#1_50').css('display','none')" style="display: none" id="1_50">
+                   <ol>
+<li>braccia : 0.0</li>
+<li>b_ : 0.0</li>
+<li>_c : 0.0</li>
+<li>n_ : 0.0</li>
+<li>_d : 0.0</li>
+<li>f_ : 0.0</li>
+<li>_n : 0.0</li>
+<li>_m : 0.0</li>
+<li>soldi : 0.0</li>
+<li>vasari : 0.0</li>
+<li>_f : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_51').css('display', $('#1_51').css('display') === 'block' ? 'none' : 'block')">
+                          【The Picture of Dorian Gray】：Oscar Wilde (8551)
+                      </span>
+                   <div onclick="$('#1_51').css('display','none')" style="display: none" id="1_51">
+                   <ol>
+<li>narborough : 0.0</li>
+<li>selby : 0.0</li>
+<li>kelso : 0.0</li>
+<li>ruxton : 0.0</li>
+<li>ferrol : 0.0</li>
+<li>treadley : 0.0</li>
+<li>frame-maker : 0.0</li>
+<li>gold-thread : 0.0</li>
+<li>agatha's : 0.0</li>
+<li>curzon : 0.0</li>
+<li>carlington : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_52').css('display', $('#1_52').css('display') === 'block' ? 'none' : 'block')">
+                          【Pride and Prejudice】：Jane Austen (38427)
+                      </span>
+                   <div onclick="$('#1_52').css('display','none')" style="display: none" id="1_52">
+                   <ol>
+<li>bingley : 0.0</li>
+<li>wickham : 0.0</li>
+<li>longbourn : 0.0</li>
+<li>netherfield : 0.0</li>
+<li>meryton : 0.0</li>
+<li>pemberley : 0.0</li>
+<li>rosings : 0.0</li>
+<li>bourgh : 0.0</li>
+<li>fitzwilliam : 0.0</li>
+<li>hunsford : 0.0</li>
+<li>darcy's : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_53').css('display', $('#1_53').css('display') === 'block' ? 'none' : 'block')">
+                          【The Complete Works of William Shakespeare】：William Shakespeare (5360)
+                      </span>
+                   <div onclick="$('#1_53').css('display','none')" style="display: none" id="1_53">
+                   <ol>
+<li>dromio : 0.0</li>
+<li>inc : 0.0</li>
+<li>download : 0.0</li>
+<li>1990-1993 : 0.0</li>
+<li>antipholus : 0.0</li>
+<li>petruchio : 0.0</li>
+<li>berowne : 0.0</li>
+<li>bardolph : 0.0</li>
+<li>claudio : 0.0</li>
+<li>olivia : 0.0</li>
+<li>enobarbus : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_54').css('display', $('#1_54').css('display') === 'block' ? 'none' : 'block')">
+                          【Steam, Its Generation and Use】：Babcock &amp;amp; Wilcox Company (9849)
+                      </span>
+                   <div onclick="$('#1_54').css('display','none')" style="display: none" id="1_54">
+                   <ol>
+<li>babcock : 0.0</li>
+<li>|| : 0.0</li>
+<li>calorimeter : 0.0</li>
+<li>bagasse : 0.0</li>
+<li>water-tube : 0.0</li>
+<li>|______|_______|_______|_______|_______|_______|_______|_______| : 0.0</li>
+<li>calorific : 0.0</li>
+<li>superheat : 0.0</li>
+<li>|________|_________|_______|_______|_______|_______|_______|_______| : 0.0</li>
+<li>t| : 0.0</li>
+<li>co_ : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_55').css('display', $('#1_55').css('display') === 'block' ? 'none' : 'block')">
+                          【Sense and Sensibility】：Jane Austen (5332)
+                      </span>
+                   <div onclick="$('#1_55').css('display','none')" style="display: none" id="1_55">
+                   <ol>
+<li>marianne : 0.0</li>
+<li>dashwood : 0.0</li>
+<li>norland : 0.0</li>
+<li>dashwoods : 0.0</li>
+<li>delaford : 0.0</li>
+<li>allenham : 0.0</li>
+<li>longstaple : 0.0</li>
+<li>elinor's : 0.0</li>
+<li>marianne's : 0.0</li>
+<li>jennings's : 0.0</li>
+<li>donavan : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_56').css('display', $('#1_56').css('display') === 'block' ? 'none' : 'block')">
+                          【Moby Dick; Or, The Whale】：Herman Melville (10593)
+                      </span>
+                   <div onclick="$('#1_56').css('display','none')" style="display: none" id="1_56">
+                   <ol>
+<li>queequeg : 0.0</li>
+<li>pequod : 0.0</li>
+<li>moby : 0.0</li>
+<li>whalemen : 0.0</li>
+<li>tashtego : 0.0</li>
+<li>steelkilt : 0.0</li>
+<li>daggoo : 0.0</li>
+<li>mast-heads : 0.0</li>
+<li>whale-ship : 0.0</li>
+<li>fedallah : 0.0</li>
+<li>lakeman : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_57').css('display', $('#1_57').css('display') === 'block' ? 'none' : 'block')">
+                          【The Jungle Book】：Rudyard Kipling (5247)
+                      </span>
+                   <div onclick="$('#1_57').css('display','none')" style="display: none" id="1_57">
+                   <ol>
+<li>mowgli : 0.0</li>
+<li>bagheera : 0.0</li>
+<li>baloo : 0.0</li>
+<li>rikki-tikki : 0.0</li>
+<li>shere : 0.0</li>
+<li>toomai : 0.0</li>
+<li>kotick : 0.0</li>
+<li>kala : 0.0</li>
+<li>akela : 0.0</li>
+<li>kaa : 0.0</li>
+<li>nagaina : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_58').css('display', $('#1_58').css('display') === 'block' ? 'none' : 'block')">
+                          【English Literature】：William J.  Long (11253)
+                      </span>
+                   <div onclick="$('#1_58').css('display','none')" style="display: none" id="1_58">
+                   <ol>
+<li>jonson : 0.0</li>
+<li>=e : 0.0</li>
+<li>=o : 0.0</li>
+<li>gawain : 0.0</li>
+<li>c脱dmon : 0.0</li>
+<li>saintsbury : 0.0</li>
+<li>_beowulf_ : 0.0</li>
+<li>macmillan : 0.0</li>
+<li>wyclif : 0.0</li>
+<li>cynewulf : 0.0</li>
+<li>bront谷 : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_59').css('display', $('#1_59').css('display') === 'block' ? 'none' : 'block')">
+                          【Les Misérables】：Victor Hugo (19228)
+                      </span>
+                   <div onclick="$('#1_59').css('display','none')" style="display: none" id="1_59">
+                   <ol>
+<li>valjean : 0.0</li>
+<li>cosette : 0.0</li>
+<li>thenardier : 0.0</li>
+<li>javert : 0.0</li>
+<li>gavroche : 0.0</li>
+<li>fauchelevent : 0.0</li>
+<li>enjolras : 0.0</li>
+<li>gillenormand : 0.0</li>
+<li>fantine : 0.0</li>
+<li>courfeyrac : 0.0</li>
+<li>jondrette : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_60').css('display', $('#1_60').css('display') === 'block' ? 'none' : 'block')">
+                          【Wuthering Heights】：Emily Brontë (11601)
+                      </span>
+                   <div onclick="$('#1_60').css('display','none')" style="display: none" id="1_60">
+                   <ol>
+<li>heathcliff : 0.0</li>
+<li>linton : 0.0</li>
+<li>hareton : 0.0</li>
+<li>earnshaw : 0.0</li>
+<li>cathy : 0.0</li>
+<li>hindley : 0.0</li>
+<li>gimmerton : 0.0</li>
+<li>thrushcross : 0.0</li>
+<li>lockwood : 0.0</li>
+<li>lintons : 0.0</li>
+<li>minny : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_61').css('display', $('#1_61').css('display') === 'block' ? 'none' : 'block')">
+                          【Jane Eyre】：Charlotte Brontë (12164)
+                      </span>
+                   <div onclick="$('#1_61').css('display','none')" style="display: none" id="1_61">
+                   <ol>
+<li>thornfield : 0.0</li>
+<li>brocklehurst : 0.0</li>
+<li>lowood : 0.0</li>
+<li>gateshead : 0.0</li>
+<li>millcote : 0.0</li>
+<li>scatcherd : 0.0</li>
+<li>celine : 0.0</li>
+<li>varens : 0.0</li>
+<li>-shire : 0.0</li>
+<li>lowton : 0.0</li>
+<li>whitcross : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_62').css('display', $('#1_62').css('display') === 'block' ? 'none' : 'block')">
+                          【A Doll&#39;s House : a play】：Henrik Ibsen (5141)
+                      </span>
+                   <div onclick="$('#1_62').css('display','none')" style="display: none" id="1_62">
+                   <ol>
+<li>helmer : 0.0</li>
+<li>linde : 0.0</li>
+<li>krogstad : 0.0</li>
+<li>torvald : 0.0</li>
+<li>tarantella : 0.0</li>
+<li>ivar : 0.0</li>
+<li>fancy-dress : 0.0</li>
+<li>helmers : 0.0</li>
+<li>singing-bird : 0.0</li>
+<li>doll-child : 0.0</li>
+<li>emmy : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_63').css('display', $('#1_63').css('display') === 'block' ? 'none' : 'block')">
+                          【The Brothers Karamazov】：Fyodor Dostoyevsky (5084)
+                      </span>
+                   <div onclick="$('#1_63').css('display','none')" style="display: none" id="1_63">
+                   <ol>
+<li>alyosha : 0.0</li>
+<li>smerdyakov : 0.0</li>
+<li>fyodorovitch : 0.0</li>
+<li>grushenka : 0.0</li>
+<li>rakitin : 0.0</li>
+<li>grigory : 0.0</li>
+<li>karamazov : 0.0</li>
+<li>ilusha : 0.0</li>
+<li>“that’s : 0.0</li>
+<li>mitya’s : 0.0</li>
+<li>parfenovitch : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_64').css('display', $('#1_64').css('display') === 'block' ? 'none' : 'block')">
+                          【Through the Looking-Glass】：Lewis Carroll (5040)
+                      </span>
+                   <div onclick="$('#1_64').css('display','none')" style="display: none" id="1_64">
+                   <ol>
+<li>tweedledum : 0.0</li>
+<li>tweedledee : 0.0</li>
+<li>hatta : 0.0</li>
+<li>haigha : 0.0</li>
+<li>plum-cake : 0.0</li>
+<li>slithy : 0.0</li>
+<li>wabe : 0.0</li>
+<li>toves : 0.0</li>
+<li>gimble : 0.0</li>
+<li>mimsy : 0.0</li>
+<li>outgrabe : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_65').css('display', $('#1_65').css('display') === 'block' ? 'none' : 'block')">
+                          【A Tale of Two Cities】：Charles Dickens (12198)
+                      </span>
+                   <div onclick="$('#1_65').css('display','none')" style="display: none" id="1_65">
+                   <ol>
+<li>cruncher : 0.0</li>
+<li>stryver : 0.0</li>
+<li>tellson : 0.0</li>
+<li>evremonde : 0.0</li>
+<li>barsad : 0.0</li>
+<li>foulon : 0.0</li>
+<li>wood-sawyer : 0.0</li>
+<li>tellson's : 0.0</li>
+<li>citizeness : 0.0</li>
+<li>fleet-street : 0.0</li>
+<li>defarges : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_66').css('display', $('#1_66').css('display') === 'block' ? 'none' : 'block')">
+                          【Peter Pan】：J. M.  Barrie (12987)
+                      </span>
+                   <div onclick="$('#1_66').css('display','none')" style="display: none" id="1_66">
+                   <ol>
+<li>wendy : 0.0</li>
+<li>nana : 0.0</li>
+<li>smee : 0.0</li>
+<li>neverland : 0.0</li>
+<li>juke : 0.0</li>
+<li>bo'sun : 0.0</li>
+<li>marooners : 0.0</li>
+<li>wendy's : 0.0</li>
+<li>doodle-doo : 0.0</li>
+<li>noodler : 0.0</li>
+<li>jas : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_67').css('display', $('#1_67').css('display') === 'block' ? 'none' : 'block')">
+                          【Studies in the Psychology of Sex, Volume 1】：Havelock Ellis (7777)
+                      </span>
+                   <div onclick="$('#1_67').css('display','none')" style="display: none" id="1_67">
+                   <ol>
+<li>auto-erotic : 0.0</li>
+<li>f端r : 0.0</li>
+<li>coitus : 0.0</li>
+<li>auto-erotism : 0.0</li>
+<li>masturbate : 0.0</li>
+<li>ecbolic : 0.0</li>
+<li>bd : 0.0</li>
+<li>breuer : 0.0</li>
+<li>_british : 0.0</li>
+<li>menstruating : 0.0</li>
+<li>neurasthenia : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_68').css('display', $('#1_68').css('display') === 'block' ? 'none' : 'block')">
+                          【The Hound of the Baskervilles】：Arthur Conan Doyle (4771)
+                      </span>
+                   <div onclick="$('#1_68').css('display','none')" style="display: none" id="1_68">
+                   <ol>
+<li>baskerville : 0.0</li>
+<li>grimpen : 0.0</li>
+<li>tracey : 0.0</li>
+<li>baskervilles : 0.0</li>
+<li>merripit : 0.0</li>
+<li>stapletons : 0.0</li>
+<li>moor-gate : 0.0</li>
+<li>barrymore : 0.0</li>
+<li>lafter : 0.0</li>
+<li>rodger : 0.0</li>
+<li>princetown : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_69').css('display', $('#1_69').css('display') === 'block' ? 'none' : 'block')">
+                          【Adventures of Huckleberry Finn】：Mark Twain (18792)
+                      </span>
+                   <div onclick="$('#1_69').css('display','none')" style="display: none" id="1_69">
+                   <ol>
+<li>gwyne : 0.0</li>
+<li>doan : 0.0</li>
+<li>wuz : 0.0</li>
+<li>ji : 0.0</li>
+<li>s'i : 0.0</li>
+<li>looky : 0.0</li>
+<li>reck'n : 0.0</li>
+<li>dah : 0.0</li>
+<li>sherburn : 0.0</li>
+<li>nuther : 0.0</li>
+<li>clumb : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_70').css('display', $('#1_70').css('display') === 'block' ? 'none' : 'block')">
+                          【The Iliad】：Homer (4736)
+                      </span>
+                   <div onclick="$('#1_70').css('display','none')" style="display: none" id="1_70">
+                   <ol>
+<li>atrides : 0.0</li>
+<li>tydides : 0.0</li>
+<li>merion : 0.0</li>
+<li>xanthus : 0.0</li>
+<li>pylian : 0.0</li>
+<li>asius : 0.0</li>
+<li>briseis : 0.0</li>
+<li>sq : 0.0</li>
+<li>saturnia : 0.0</li>
+<li>sqq : 0.0</li>
+<li>melesigenes : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_71').css('display', $('#1_71').css('display') === 'block' ? 'none' : 'block')">
+                          【The Ideal Bartender】：Tom Bullock (4697)
+                      </span>
+                   <div onclick="$('#1_71').css('display','none')" style="display: none" id="1_71">
+                   <ol>
+<li>bartender*** : 0.0</li>
+<li>ferreri : 0.0</li>
+<li>jimbo : 0.0</li>
+<li>dedicator : 0.0</li>
+<li>certifier : 0.0</li>
+<li>subfolder : 0.0</li>
+<li>kirsten : 0.0</li>
+<li>ogg : 0.0</li>
+<li>burgoyne : 0.0</li>
+<li>audio : 0.0</li>
+<li>mp3 : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_72').css('display', $('#1_72').css('display') === 'block' ? 'none' : 'block')">
+                          【Narrative of the Life of Frederick Douglass】：Frederick Douglass (4695)
+                      </span>
+                   <div onclick="$('#1_72').css('display','none')" style="display: none" id="1_72">
+                   <ol>
+<li>freeland : 0.0</li>
+<li>anti-slavery : 0.0</li>
+<li>ruggles : 0.0</li>
+<li>cowskin : 0.0</li>
+<li>easton : 0.0</li>
+<li>michael's : 0.0</li>
+<li>ship-yard : 0.0</li>
+<li>slaveholding : 0.0</li>
+<li>demby : 0.0</li>
+<li>calking : 0.0</li>
+<li>out-farms : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_73').css('display', $('#1_73').css('display') === 'block' ? 'none' : 'block')">
+                          【The Story of a Stuffed Elephant】：Laura Lee Hope (4690)
+                      </span>
+                   <div onclick="$('#1_73').css('display','none')" style="display: none" id="1_73">
+                   <ol>
+<li>elephant*** : 0.0</li>
+<li>dedicator : 0.0</li>
+<li>subfolder : 0.0</li>
+<li>certifier : 0.0</li>
+<li>ogg : 0.0</li>
+<li>audio : 0.0</li>
+<li>mp3 : 0.0</li>
+<li>spx : 0.0</li>
+<li>mono : 0.0</li>
+<li>aac : 0.0</li>
+<li>dedicators : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_74').css('display', $('#1_74').css('display') === 'block' ? 'none' : 'block')">
+                          【The Prince and the Pauper】：Mark Twain (4685)
+                      </span>
+                   <div onclick="$('#1_74').css('display','none')" style="display: none" id="1_74">
+                   <ol>
+<li>hendon : 0.0</li>
+<li>ruffler : 0.0</li>
+<li>loving-cup : 0.0</li>
+<li>whipping-boy : 0.0</li>
+<li>foo-foo : 0.0</li>
+<li>trumbull : 0.0</li>
+<li>diaperer : 0.0</li>
+<li>mannerless : 0.0</li>
+<li>ridley : 0.0</li>
+<li>bridgy : 0.0</li>
+<li>_thee_ : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_75').css('display', $('#1_75').css('display') === 'block' ? 'none' : 'block')">
+                          【Pennsylvania Dutch Cooking】：Unknown (4634)
+                      </span>
+                   <div onclick="$('#1_75').css('display','none')" style="display: none" id="1_75">
+                   <ol>
+<li>tsp : 0.0</li>
+<li>tblsp : 0.0</li>
+<li>tablespoon : 0.0</li>
+<li>350-f : 0.0</li>
+<li>diced : 0.0</li>
+<li>floured : 0.0</li>
+<li>qts : 0.0</li>
+<li>casserole : 0.0</li>
+<li>griddle : 0.0</li>
+<li>375-f : 0.0</li>
+<li>cookie : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_76').css('display', $('#1_76').css('display') === 'block' ? 'none' : 'block')">
+                          【Don Juan】：Baron George Gordon Byron Byron (4602)
+                      </span>
+                   <div onclick="$('#1_76').css('display','none')" style="display: none" id="1_76">
+                   <ol>
+<li>gulbeyaz : 0.0</li>
+<li>inez : 0.0</li>
+<li>juanna : 0.0</li>
+<li>suwarrow : 0.0</li>
+<li>lambro : 0.0</li>
+<li>pedrillo : 0.0</li>
+<li>lolah : 0.0</li>
+<li>cossacques : 0.0</li>
+<li>amundeville : 0.0</li>
+<li>occurr : 0.0</li>
+<li>fitz-fulke : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_77').css('display', $('#1_77').css('display') === 'block' ? 'none' : 'block')">
+                          【The Importance of Being Earnest】：Oscar Wilde (13475)
+                      </span>
+                   <div onclick="$('#1_77').css('display','none')" style="display: none" id="1_77">
+                   <ol>
+<li>bracknell : 0.0</li>
+<li>worthing : 0.0</li>
+<li>bunbury : 0.0</li>
+<li>cardew : 0.0</li>
+<li>moncrieff : 0.0</li>
+<li>bunburyist : 0.0</li>
+<li>markby : 0.0</li>
+<li>bunburying : 0.0</li>
+<li>belgrave : 0.0</li>
+<li>woolton : 0.0</li>
+<li>emigrating : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_78').css('display', $('#1_78').css('display') === 'block' ? 'none' : 'block')">
+                          【2 B R 0 2 B】：Kurt Vonnegut (4303)
+                      </span>
+                   <div onclick="$('#1_78').css('display','none')" style="display: none" id="1_78">
+                   <ol>
+<li>wehling : 0.0</li>
+<li>leora : 0.0</li>
+<li>catbox : 0.0</li>
+<li>hooligan : 0.0</li>
+<li>vonnegut : 0.0</li>
+<li>kurt : 0.0</li>
+<li>stepladder : 0.0</li>
+<li>dropcloths : 0.0</li>
+<li>faceless : 0.0</li>
+<li>gestured : 0.0</li>
+<li>hitz : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_79').css('display', $('#1_79').css('display') === 'block' ? 'none' : 'block')">
+                          【Manon Lescaut】：Abbé Prévost (14239)
+                      </span>
+                   <div onclick="$('#1_79').css('display','none')" style="display: none" id="1_79">
+                   <ol>
+<li>tiberge : 0.0</li>
+<li>chaillot : 0.0</li>
+<li>synnelet : 0.0</li>
+<li>sulpice : 0.0</li>
+<li>grieux : 0.0</li>
+<li>manon's : 0.0</li>
+<li>manon. : 0.0</li>
+<li>abb辿 : 0.0</li>
+<li>pr辿vost : 0.0</li>
+<li>andre-des-arcs : 0.0</li>
+<li>louis-d'ors : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_80').css('display', $('#1_80').css('display') === 'block' ? 'none' : 'block')">
+                          【Ulysses】：James Joyce (15148)
+                      </span>
+                   <div onclick="$('#1_80').css('display','none')" style="display: none" id="1_80">
+                   <ol>
+<li>dedalus : 0.0</li>
+<li>dignam : 0.0</li>
+<li>conmee : 0.0</li>
+<li>boylan : 0.0</li>
+<li>cissy : 0.0</li>
+<li>gerty : 0.0</li>
+<li>dollard : 0.0</li>
+<li>o'molloy : 0.0</li>
+<li>corny : 0.0</li>
+<li>caffrey : 0.0</li>
+<li>kelleher : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_81').css('display', $('#1_81').css('display') === 'block' ? 'none' : 'block')">
+                          【Robinson Crusoe】：Daniel Defoe (4106)
+                      </span>
+                   <div onclick="$('#1_81').css('display','none')" style="display: none" id="1_81">
+                   <ol>
+<li>xury : 0.0</li>
+<li>ship’s : 0.0</li>
+<li>_june_ : 0.0</li>
+<li>goat’s : 0.0</li>
+<li>_nov._ : 0.0</li>
+<li>_dec._ : 0.0</li>
+<li>“friday : 0.0</li>
+<li>friday’s : 0.0</li>
+<li>seamen’s : 0.0</li>
+<li>periagua : 0.0</li>
+<li>patron’s : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_82').css('display', $('#1_82').css('display') === 'block' ? 'none' : 'block')">
+                          【The Return of Sherlock Holmes】：Arthur Conan Doyle (4071)
+                      </span>
+                   <div onclick="$('#1_82').css('display','none')" style="display: none" id="1_82">
+                   <ol>
+<li>milverton : 0.0</li>
+<li>carruthers : 0.0</li>
+<li>soames : 0.0</li>
+<li>staunton : 0.0</li>
+<li>woodley : 0.0</li>
+<li>oldacre : 0.0</li>
+<li>cubitt : 0.0</li>
+<li>huxtable : 0.0</li>
+<li>holdernesse : 0.0</li>
+<li>brackenstall : 0.0</li>
+<li>charlington : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_83').css('display', $('#1_83').css('display') === 'block' ? 'none' : 'block')">
+                          【Persuasion】：Jane Austen (3912)
+                      </span>
+                   <div onclick="$('#1_83').css('display','none')" style="display: none" id="1_83">
+                   <ol>
+<li>musgrove : 0.0</li>
+<li>harville : 0.0</li>
+<li>kellynch : 0.0</li>
+<li>benwick : 0.0</li>
+<li>croft : 0.0</li>
+<li>musgroves : 0.0</li>
+<li>dalrymple : 0.0</li>
+<li>harvilles : 0.0</li>
+<li>carteret : 0.0</li>
+<li>monkford : 0.0</li>
+<li>rooke : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_84').css('display', $('#1_84').css('display') === 'block' ? 'none' : 'block')">
+                          【How to Live on 24 Hours a Day】：Arnold Bennett (4062)
+                      </span>
+                   <div onclick="$('#1_84').css('display','none')" style="display: none" id="1_84">
+                   <ol>
+<li>hp : 0.0</li>
+<li>over-cooked : 0.0</li>
+<li>time-expenditure : 0.0</li>
+<li>boat-sailing : 0.0</li>
+<li>street-cries : 0.0</li>
+<li>hazlitt : 0.0</li>
+<li>epictetus : 0.0</li>
+<li>spirit-lamp : 0.0</li>
+<li>banal : 0.0</li>
+<li>pottering : 0.0</li>
+<li>larking : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_85').css('display', $('#1_85').css('display') === 'block' ? 'none' : 'block')">
+                          【Prestuplenie i nakazanie. English】：Fyodor Dostoyevsky (4062)
+                      </span>
+                   <div onclick="$('#1_85').css('display','none')" style="display: none" id="1_85">
+                   <ol>
+<li>raskolnikov : 0.0</li>
+<li>sonia : 0.0</li>
+<li>razumihin : 0.0</li>
+<li>dounia : 0.0</li>
+<li>svidriga誰lov : 0.0</li>
+<li>rodya : 0.0</li>
+<li>pulcheria : 0.0</li>
+<li>romanovna : 0.0</li>
+<li>avdotya : 0.0</li>
+<li>luzhin : 0.0</li>
+<li>rodion : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_86').css('display', $('#1_86').css('display') === 'block' ? 'none' : 'block')">
+                          【Myths and Legends of China】：E. T. C.  Werner (4010)
+                      </span>
+                   <div onclick="$('#1_86').css('display','none')" style="display: none" id="1_86">
+                   <ol>
+<li>shan : 0.0</li>
+<li>miao : 0.0</li>
+<li>wang : 0.0</li>
+<li>y端 : 0.0</li>
+<li>kuan : 0.0</li>
+<li>huang : 0.0</li>
+<li>sh棚n : 0.0</li>
+<li>no-cha : 0.0</li>
+<li>taoist : 0.0</li>
+<li>tzu-ya : 0.0</li>
+<li>chuang : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_87').css('display', $('#1_87').css('display') === 'block' ? 'none' : 'block')">
+                          【Andersen&#39;s Fairy Tales】：H. C.  Andersen (3997)
+                      </span>
+                   <div onclick="$('#1_87').css('display','none')" style="display: none" id="1_87">
+                   <ol>
+<li>gerda : 0.0</li>
+<li>karen : 0.0</li>
+<li>weg : 0.0</li>
+<li>humpy-dumpy : 0.0</li>
+<li>hair-comb : 0.0</li>
+<li>tukey : 0.0</li>
+<li>elderbush : 0.0</li>
+<li>kjoge : 0.0</li>
+<li>kitchen-pot : 0.0</li>
+<li>waldemar : 0.0</li>
+<li>ivedy-avedy : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_88').css('display', $('#1_88').css('display') === 'block' ? 'none' : 'block')">
+                          【Thus Spake Zarathustra】：Friedrich Wilhelm Nietzsche (3995)
+                      </span>
+                   <div onclick="$('#1_88').css('display','none')" style="display: none" id="1_88">
+                   <ol>
+<li>down-going : 0.0</li>
+<li>ye-a : 0.0</li>
+<li>fire-dog : 0.0</li>
+<li>danceth : 0.0</li>
+<li>ass-festival : 0.0</li>
+<li>backworldsmen : 0.0</li>
+<li>marriage-ring : 0.0</li>
+<li>load-bearing : 0.0</li>
+<li>forsakenness : 0.0</li>
+<li>neighbour-love : 0.0</li>
+<li>emancipator : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_89').css('display', $('#1_89').css('display') === 'block' ? 'none' : 'block')">
+                          【The Kama Sutra of Vatsyayana】：Vatsyayana (16311)
+                      </span>
+                   <div onclick="$('#1_89').css('display','none')" style="display: none" id="1_89">
+                   <ol>
+<li>vatsyayana : 0.0</li>
+<li>artha : 0.0</li>
+<li>babhravya : 0.0</li>
+<li>sutra : 0.0</li>
+<li>shastra : 0.0</li>
+<li>vatsya : 0.0</li>
+<li>auparishtaka : 0.0</li>
+<li>ghee : 0.0</li>
+<li>jaghana : 0.0</li>
+<li>gonikaputra : 0.0</li>
+<li>nayika : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+                  <tr>
+                  <td class="term text-cell">
+                      <span onclick="$('#1_90').css('display', $('#1_90').css('display') === 'block' ? 'none' : 'block')">
+                          【The Prince】：Niccolò Machiavelli (17913)
+                      </span>
+                   <div onclick="$('#1_90').css('display','none')" style="display: none" id="1_90">
+                   <ol>
+<li>orsini : 0.0</li>
+<li>pagolo : 0.0</li>
+<li>oliverotto : 0.0</li>
+<li>uguccione : 0.0</li>
+<li>sinigalia : 0.0</li>
+<li>bentivogli : 0.0</li>
+<li>montecarlo : 0.0</li>
+<li>ruberto : 0.0</li>
+<li>vaila : 0.0</li>
+<li>pertinax : 0.0</li>
+<li>pisans : 0.0</li>
+                  </ol>
+                  </div>
+                  </td>
+                  <td class="weight num-cell">
+                  0.0
+                  </td>
+                  </tr>
+</tbody></table>
+</div>
+</div>
+</div>
+</div>
+</div>
+        <script>
+          $().ready(function() {
+              "use strict";
+
+              $('table').on('click', function(e) {
+                  if ($(this).hasClass('current-standard')) {
+                      $('table, tr').removeClass('current-standard new higher lower tie');
+                  }
+                  else {
+                      $('table, tr').removeClass('current-standard new higher lower tie');
+
+                      var ranks = {};
+                      $(this).find('td.term').each(function(i, td) {
+                          var w = $(td).find("span").text();
+                          ranks[w] = i;
+                      });
+
+                      $(this).addClass('current-standard');
+                      $(this).find("thead > tr:nth-child(2) > th").text("-");
+                      $(this).parent().parent().find('table:not(.current-standard)').each(function(_, table) {
+                          var sum_d = 0.0;
+                          $(table).find('td.term').each(function(i, td) {
+                              var w = $(td).find("span").text();
+
+                              if (!ranks.hasOwnProperty(w)) {
+                                  $(td).parent().addClass('new');
+                                  sum_d += Math.pow( $(table).find('td.term').length, 2);
+                              }
+                              else if (i < ranks[w]) {
+                                  $(td).parent().addClass('higher');
+                                  sum_d += Math.pow( i - ranks[w], 2);
+                              }
+                              else if (i > ranks[w]) {
+                                  $(td).parent().addClass('lower');
+                                  sum_d += Math.pow( i - ranks[w], 2);
+                              }
+                              else {
+                                  $(td).parent().addClass('tie');
+                              }
+                          });
+                          var n = $(table).find('td.term').length;
+                          var p = 1.0 - ((6.0 * sum_d) / (Math.pow(n, 3) - n));
+                          table.rows[1].cells[0].innerText = p;
+                          table.rows[1].cells[0].style.color = "#228B22";
+                      });
+                  }
+              });
+              $('tbody tr').on('mouseover', function(e) {
+                  if (e.shiftKey) {
+                      $('tr').removeClass('focused');
+                      var w = $(this).find('td.term span').text();
+                      $(this).parent().parent().parent().parent().find('tr').filter(function() { return $(this).find('td.term span').text() === w; }).addClass('focused');
+                  }
+              });
+          });
+        </script>
+      </body>
+      </html>

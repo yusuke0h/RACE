@@ -2,7 +2,7 @@
 <hr>
 
 <%= simple_form_for :rank, :url => ranks_path, :method => :post do |f| %>
-  <%= f.input :files, as: :file, input_html: { multiple: true } %>
+  <%= f.input :files, as: :file, :label => 'Files 複数可', input_html: { multiple: true } %>
   <hr>
 
   <div class="form-actions">

@@ -46,11 +46,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Rpv</a>
+          <a class="brand" href="<%= root_path %>">Rpv</a>
           <div class="container-fluid nav-collapse">
             <ul class="nav">
-              <li><%= link_to "DEMO", "/path1"  %></li>
-              <li><%= link_to "How to use", "/path2"  %></li>
+              <li><%= link_to "ランキング作成", new_rank_path %></li>
+              <li><%= link_to "How to use", static_pages_help_path %></li>
+              <li><%= link_to "DEMO", static_pages_demo_path %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>

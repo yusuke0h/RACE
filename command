@@ -1,4 +1,6 @@
 
+rails g controller StaticPages home help demo --no-test-framework
+
 rails g controller ranks new
 
 
