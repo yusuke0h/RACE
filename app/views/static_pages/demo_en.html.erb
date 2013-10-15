@@ -56,15 +56,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="<%= root_path %>">RACE</a>
+          <a class="brand" href="<%= ranks_new_en_path %>">RACE</a>
           <div class="container-fluid nav-collapse">
             <ul class="nav">
-              <li><%= link_to "ランキング作成", new_rank_path %></li>
-              <li><%= link_to "使い方", static_pages_help_path %></li>
-              <li><%= link_to "DEMO", static_pages_demo_path %></li>
+              <li><%= link_to "Make Up Ranking Table", ranks_new_en_path %></li>
+              <li><%= link_to "How to use", static_pages_help_en_path %></li>
+              <li><%= link_to "DEMO", static_pages_demo_en_path %></li>
             </ul>
             <div class="pull-right">
-              <%= link_to "English", ranks_new_en_path, class: 'btn' %>
+              <%= link_to "Japanese", root_path, class: 'btn' %>
             </div>
           </div><!--/.nav-collapse -->
         </div>
@@ -88,36 +88,33 @@
 <h1>DEMO</h1>
 <hr>
 
-<h4><%= link_to 'DEMO1：単語重み付けランキング', static_pages_demo_page1_path, :target=>["_blank"] %></h4>
-<h4><%= link_to 'DEMO2：推薦ランキング', static_pages_demo_page2_path, :target=>["_blank"] %></h4>
+<h4><%= link_to 'DEMO1：Terms weighting Ranking', static_pages_demo_page1_path, :target=>["_blank"] %></h4>
+<h4><%= link_to 'DEMO2：Recommendation Ranking', static_pages_demo_page2_path, :target=>["_blank"] %></h4>
 
 
 <hr>
-<h3>ランキング表の機能</h3>
-<h5>Up, Down色付け</h5>
-選択中のランキング表のアイテムがその他の表で順位が上昇したか，下降したか色で表示します．<br>
-赤：Up<br>
-青：Down<br>
-黃：未出現<br>
+<h3>Ranking Table Feature</h3>
+<h5>Coloring with Up or Down</h5>
+red：Up<br>
+blue：Down<br>
+yellow：Not emerge<br>
 
 <br>
-<h5>他ランキング表でのアイテム強調表示</h5>
-Shiftキーを押しながら，アイテムにマウスを重ねると他ランキング表で同アイテムが強調表示されます．<br>
+<h5>Item Highlighting</h5>
+Press shift key and mouseover a item.<br>
 
 <br>
-<h5>アイテムクリックで内容表示（wordを使用した場合）</h5>
-推薦や検索等でアイテムがどの要素で上位にランキングされたかを知るための機能です．<br>
-アイテムをクリックするとword以下が展開されます．<br>
+<h5>Open words when item click</h5>
+For recommend, search.<br>
 
 <br>
-<h5>ランキング相関係数計算</h5>
-選択中のランキング表から見た他ランキング表との相関係数（<%= link_to 'スピアマンの順位相関係数', 'http://ja.wikipedia.org/wiki/%E3%82%B9%E3%83%94%E3%82%A2%E3%83%9E%E3%83%B3%E3%81%AE%E9%A0%86%E4%BD%8D%E7%9B%B8%E9%96%A2%E4%BF%82%E6%95%B0' %>）を計算します．<br>
-ランキング表をクリックすると他ランキング表にて計算されます．<br>
-アイテムが他ランキング表にない場合には最下位分の距離で計算されます．<br>
+<h5>Evaluated rank correlation coefficient</h5>
+Between now selected tabel and others.（<%= link_to "Spearman's rank correlation coefficient", 'http://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient' %>）<br>
+If item not exist other table, Evaluated rank the lowest distance.<br>
 
 <br>
-<h5>翻訳</h5>
-こちらで実装した機能ではありませんが，Google Chrome等を使用の場合，ランキング表はhtmlですのでブラウザの翻訳機能が使用できます．<br>
+<h5>Translation</h5>
+You can translate another langage with the help of Google Chrome.<br>
 <br>
 
         </div>
@@ -125,7 +122,7 @@ Shiftキーを押しながら，アイテムにマウスを重ねると他ラン
 
       <footer>
         <p>&copy; Yuta Taniguchi, Yusuke Hosoi 2013, <%= link_to 'github', 'https://github.com/yusuke0h/RACE' %> </p>
-        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://race-rank.herokuapp.com/" data-text="RACE -ランキングを比較表示できるWebアプリ" data-lang="ja">ツイート</a>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://race-rank.herokuapp.com/" data-text="RACE - Web Application which easily create rankings comparison table" data-lang="en">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs'); twttr.widgets.load();</script>
       </footer>
 

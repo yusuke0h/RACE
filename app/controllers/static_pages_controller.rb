@@ -8,6 +8,15 @@ class StaticPagesController < ApplicationController
   def demo
   end
 
+  def home_en
+  end
+
+  def help_en
+  end
+
+  def demo_en
+  end
+
   def demo_page1
     render :layout => false
   end
